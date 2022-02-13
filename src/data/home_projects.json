@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Skript Studio",
+        "description": "Skript Studio is an online code editor made for Skript with built-in syntax highlighting and obfufcator.",
+        "image": "/images/skript_studio.png",
+        "website": "https://skriptstudio.runtimecloud.com/"
+    },
+    {
+        "name": "CubedCraft File Uploader",
+        "description": "Skript Studio is an online code editor made for Skript with built-in syntax highlighting and obfufcator.",
+        "image": "https://user-images.githubusercontent.com/41904540/131379850-fce98cfd-ca8f-40e1-bd1f-ef6ba067f966.png",
+        "website": "https://github.com/fireclaws9/CubedCraft_File_Uploader/releases"
+    }
+]
