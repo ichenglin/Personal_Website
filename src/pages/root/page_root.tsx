@@ -10,7 +10,6 @@ export default class PageRoot extends Component<Props, State> {
 
 	constructor(props: Props) {
 		super(props);
-		this.state = {};
 	}
 
 	render() {

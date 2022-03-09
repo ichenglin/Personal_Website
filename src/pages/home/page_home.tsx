@@ -5,18 +5,29 @@ import experience_icons from "../../data/home_experiences.json";
 import projects from "../../data/home_projects.json";
 
 interface Props {};
-interface State {};
+interface State {
+	github_profile: {}
+};
 
 export default class PageHome extends Component<Props, State> {
 
 	constructor(props: Props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			github_profile: {}
+		};
+	}
+
+	async componentDidMount() {
+		const profile = await fetch("https://backend.runtimecloud.com/profile").then(response => response.json());
+		if (profile.error === false) {
+			this.setState({github_profile: profile.result});
+		}
 	}
 
 	render() {
 		return <div className="page_home">
-            <div className="page_home_cover page_home_container">
+            <div className="page_home_container page_home_cover">
 				<div className="page_home_cover_title">
 					<h5>Runtime Cloud</h5>
 					<p>Home of Open Source Projects</p>
@@ -26,7 +37,7 @@ export default class PageHome extends Component<Props, State> {
 					<i className="fa fa-arrow-right"/>
 				</a>
 			</div>
-			<div className="page_home_experience page_home_container">
+			<div className="page_home_container page_home_experience">
 				<h3 className="page_home_container_title">Experience</h3>
 				<div className="page_home_experience_grid">
 					{(experience_icons as {name: string, icon: string}[]).map((loop_experience, index) => (
@@ -45,7 +56,7 @@ export default class PageHome extends Component<Props, State> {
 				</div>
 			</div>
 			{projects.map((project, index) => (
-				<div className="page_home_project page_home_container" key={index}>
+				<div className="page_home_container page_home_project" key={index}>
 					<div className="page_home_project_content">
 						<div className="page_home_project_content_image">
 							<img className="global_container_shadow" alt={project.name} src={project.image}/>
