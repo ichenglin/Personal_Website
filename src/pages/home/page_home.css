@@ -126,6 +126,7 @@
 
 .page_home_contribution_slideshow_slide {
     display: flex;
+    transform: translateX(calc(var(--slider_page) * -810px));
     transition: transform 1s ease-in-out;
 }
 
@@ -167,23 +168,33 @@
 }
 
 #page_home_contribution_slideshow_forward, #page_home_contribution_slideshow_backward {
-    width: 100px;
-    height: 100%;
+    width: 50px;
+    height: 50px;
     position: absolute;
-    background-color: transparent;
     border: none;
+    border-radius: 50%;
+    transform: translateY(-25px);
+    background-color: rgb(245, 245, 245);
+    opacity: 80%;
+}
+
+#page_home_contribution_slideshow_forward:hover, #page_home_contribution_slideshow_backward:hover {
+    filter: brightness(90%);
+}
+
+#page_home_contribution_slideshow_forward:active, #page_home_contribution_slideshow_backward:active {
+    filter: brightness(80%);
 }
 
 #page_home_contribution_slideshow_forward {
-    top: 0px;
-    right: 0px;
-    background-image: linear-gradient(to left, rgba(245, 245, 245, 1), transparent);
+    top: 50%;
+    right: 20px;
+    /*background-image: linear-gradient(to left, rgba(245, 245, 245, 1), transparent);*/
 }
 
 #page_home_contribution_slideshow_backward {
-    top: 0px;
-    left: 0px;
-    background-image: linear-gradient(to right, rgba(245, 245, 245, 1), transparent);
+    top: 50%;
+    left: 20px;
 }
 
 .page_home_contribution_visit {
@@ -262,6 +273,20 @@
     .page_home_experience_grid {
         grid-template-columns: auto auto;
         grid-template-rows: max-content max-content max-content max-content;
+    }
+    .page_home_contribution_slideshow {
+        max-width: calc(100% - 30px);
+    }
+    .page_home_contribution_slideshow_slide {
+        transform: translateX(calc(var(--slider_page) * -100%));
+    }
+    .page_home_contribution_slideshow_card {
+        width: calc(100% * 0.5 - 10px);
+        min-width: calc(100% * 0.5 - 10px);
+        margin: 5px;
+    }
+    #page_home_contribution_slideshow_forward, #page_home_contribution_slideshow_backward {
+        width: 50px;
     }
     .page_home_project_content {
         margin: 0px 30px;

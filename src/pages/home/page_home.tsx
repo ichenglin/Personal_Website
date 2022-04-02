@@ -40,14 +40,14 @@ export default class PageHome extends Component<Props, State> {
 		const new_stage = new_stage_raw < 0 ? new_stage_raw + 3 : new_stage_raw;
 		PageHome.contribution_slider_stage = new_stage;
 		// apply effect
-		console.log(new_stage);
 		const contribution_slider = document.getElementsByClassName("page_home_contribution_slideshow_slide")[0] as HTMLElement;
-		contribution_slider.style.transform = `translateX(-${new_stage * contribution_slider.clientWidth}px)`;
+		//contribution_slider.style.transform = `translateX(-${new_stage * contribution_slider.clientWidth}px)`;
+		contribution_slider.style.setProperty("--slider_page", new_stage.toString());
 	}
 
 	render() {
 		return <div className="page_home">
-            <section className="page_home_container page_home_cover">
+			<section className="page_home_container page_home_cover">
 				<div className="page_home_cover_title">
 					<h5>Runtime Cloud</h5>
 					<p>Home of Open Source Projects</p>
@@ -82,7 +82,7 @@ export default class PageHome extends Component<Props, State> {
 						{((this.state.github_profile as any).commits as Array<any>).reverse().slice(0, 9).map((value, index) => (
 						<div className="page_home_contribution_slideshow_card global_container_shadow" key={index}>
 							<div className="page_home_contribution_slideshow_card_title">
-								<h1>{value.repository.replaceAll("_", " ")}</h1>
+								<h1>{value.repository.replace(/[^a-zA-Z]/g, " ")}</h1>
 								<p>{value.message}</p>
 							</div>
 							<div className="global_container_divider"></div>
@@ -128,6 +128,6 @@ export default class PageHome extends Component<Props, State> {
 					</div>
 				</section>
 			))}
-        </div>;
+		</div>;
 	}
 }
