@@ -52,7 +52,7 @@ export default class PageHome extends Component<Props, State> {
 					<h5>Runtime Cloud</h5>
 					<p>Home of Open Source Projects</p>
 				</div>
-				<a className="page_home_cover_visit page_home_button" href="https://github.com/fireclaws9" target="_blank">
+				<a className="page_home_cover_visit page_home_button" href="https://github.com/fireclaws9" target="_blank" rel="noreferrer">
 					<p>Visit Github</p>
 					<i className="fa fa-arrow-right"/>
 				</a>
@@ -102,7 +102,7 @@ export default class PageHome extends Component<Props, State> {
 						<i className="fas fa-chevron-right"></i>
 					</button>
 				</div>
-				<a className="page_home_contribution_visit page_home_button" href="https://github.com/fireclaws9" target="_blank">
+				<a className="page_home_contribution_visit page_home_button" href="https://github.com/fireclaws9" target="_blank" rel="noreferrer">
 					<p>Visit Github</p>
 					<i className="fa fa-arrow-right"/>
 				</a>
@@ -120,7 +120,7 @@ export default class PageHome extends Component<Props, State> {
 							<p className="page_home_container_paragraph">
 								{project.description}
 							</p>
-							<a className="page_home_project_content_visit page_home_button" href={project.website} target="_blank">
+							<a className="page_home_project_content_visit page_home_button" href={project.website} target="_blank" rel="noreferrer">
 								<p>Get Started</p>
 								<i className="fa fa-arrow-right"/>
 							</a>
