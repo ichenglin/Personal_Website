@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import "./page_root.css";
 import PageHome from "../home/page_home";
 import PageRootFooter from "./components/page_root_footer";
+import PageRootHeader from "./components/page_root_header";
 
 interface Props {};
 interface State {};
@@ -15,6 +16,7 @@ export default class PageRoot extends Component<Props, State> {
 
 	render() {
 		return <>
+			<PageRootHeader/>
 			<Router><Routes>
 				<Route path="*" element={<>
 					<PageHome/>
