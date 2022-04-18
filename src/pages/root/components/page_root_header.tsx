@@ -19,17 +19,19 @@ export default class PageRootHeader extends Component<Props, State> {
 	private header_update(): void {
 		const scroll_amount = window.scrollY;
 		const header_section = document.getElementsByClassName("page_root_header")[0] as any;
-		if (scroll_amount > 600) {
-			header_section.dataset.display = "pinned";
-		} else {
-			header_section.dataset.display = "";
-		}
+		header_section.dataset.pinned = (scroll_amount > 600 ? "true" : "");
+	}
+
+	private header_expand(): void {
+		const header_section = document.getElementsByClassName("page_root_header")[0] as any;
+		header_section.dataset.expanded = (header_section.dataset.expanded === "true" ? "" : "true");
 	}
 
 	render() {
 		return <section className="page_root_header">
             <div className="page_root_header_container">
-				<a href="https://runtimecloud.com">Home</a>
+				<i className="fas fa-ellipsis-v" onClick={() => this.header_expand()}></i>
+				<a href="/">Home</a>
 				<a href="/projects">Projects</a>
 				<a href="/contributions">Contributions</a>
 				<a href="https://github.com/fireclaws9" target="_blank" rel="noreferrer">Github</a>
