@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "./page_root_header.css";
 
-interface Props {};
+interface Props {
+	float: boolean
+};
 interface State {};
 
 export default class PageRootHeader extends Component<Props, State> {
@@ -12,17 +14,29 @@ export default class PageRootHeader extends Component<Props, State> {
 	}
 
 	componentDidMount() {
-		window.onscroll = () => this.header_update();
-		this.header_update();
+		if (this.props.float !== true) {
+			// header is not float state
+			this.header_pinned_toggle(true);
+			return;
+		}
+		// header is float state
+		window.onscroll = () => this.header_pinned_toggle();
+		this.header_pinned_toggle();
+		this.header_float_enable();
 	}
 
-	private header_update(): void {
+	private header_float_enable(): void {
+		const header_section = document.getElementsByClassName("page_root_header")[0] as any;
+		header_section.dataset.float = "true";
+	}
+
+	private header_pinned_toggle(force_state?: boolean): void {
 		const scroll_amount = window.scrollY;
 		const header_section = document.getElementsByClassName("page_root_header")[0] as any;
-		header_section.dataset.pinned = (scroll_amount > 600 ? "true" : "");
+		header_section.dataset.pinned = (scroll_amount > 600 || force_state ? "true" : "");
 	}
 
-	private header_expand(): void {
+	private header_expand_toggle(): void {
 		const header_section = document.getElementsByClassName("page_root_header")[0] as any;
 		header_section.dataset.expanded = (header_section.dataset.expanded === "true" ? "" : "true");
 	}
@@ -30,10 +44,10 @@ export default class PageRootHeader extends Component<Props, State> {
 	render() {
 		return <section className="page_root_header">
             <div className="page_root_header_container">
-				<i className="fas fa-ellipsis-v" onClick={() => this.header_expand()}></i>
+				<i className="fas fa-ellipsis-v" onClick={() => this.header_expand_toggle()}></i>
 				<a href="/">Home</a>
 				<a href="/projects">Projects</a>
-				<a href="/contributions">Contributions</a>
+				<a href="/#contributions">Contributions</a>
 				<a href="https://github.com/fireclaws9" target="_blank" rel="noreferrer">Github</a>
 				<a href="/contact">Contact</a>
 			</div>

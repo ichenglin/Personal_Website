@@ -2,13 +2,18 @@
     width: 100%;
     height: 60px;
     padding-top: 10px;
-    position: fixed;
+    position: sticky;
     top: 0px;
     left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.25s;
+}
+
+.page_root_header[data-float="true"] {
+    position: fixed;
+    /* top/left position already set above */
 }
 
 .page_root_header[data-pinned="true"] {
