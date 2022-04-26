@@ -52,7 +52,7 @@ export default class PageHome extends Component<Props, State> {
 					<h5>Runtime Cloud</h5>
 					<p>Home of Open Source Projects</p>
 				</div>
-				<a className="page_home_cover_visit page_home_button" href="https://github.com/fireclaws9" target="_blank" rel="noreferrer">
+				<a className="page_home_cover_visit page_home_button" href="https://github.com/ichenglin" target="_blank" rel="noreferrer">
 					<p>Visit Github</p>
 					<i className="fa fa-arrow-right"/>
 				</a>
@@ -86,7 +86,7 @@ export default class PageHome extends Component<Props, State> {
 								<p>{value.message}</p>
 							</div>
 							<div className="global_container_divider"></div>
-							<img src={`https://opengraph.githubassets.com/a381e358ffe83738fffb77d8ed4b26176d436243eb9a06064512026d6bb8ad7e/fireclaws9/${value.repository}`} alt={value.repository}/>
+							<img src={`https://opengraph.githubassets.com/a381e358ffe83738fffb77d8ed4b26176d436243eb9a06064512026d6bb8ad7e/ichenglin/${value.repository}`} alt={value.repository}/>
 							<div className="global_container_divider"></div>
 							<div className="page_home_contribution_slideshow_card_description">
 								<i className="fas fa-star"></i>
@@ -102,7 +102,7 @@ export default class PageHome extends Component<Props, State> {
 						<i className="fas fa-chevron-right"></i>
 					</button>
 				</div>
-				<a className="page_home_contribution_visit page_home_button" href="https://github.com/fireclaws9" target="_blank" rel="noreferrer">
+				<a className="page_home_contribution_visit page_home_button" href="https://github.com/ichenglin" target="_blank" rel="noreferrer">
 					<p>Visit Github</p>
 					<i className="fa fa-arrow-right"/>
 				</a>

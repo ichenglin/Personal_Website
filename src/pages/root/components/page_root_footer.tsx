@@ -22,7 +22,7 @@ export default class PageRootFooter extends Component<Props, State> {
                 <div className="page_root_footer_content_links">
                     <h1>Contact Links</h1>
                     <p>support@runtimecloud.com</p>
-                    <p>github.com/fireclaws9</p>
+                    <p>github.com/ichenglin</p>
                 </div>
             </div>
         </section>;

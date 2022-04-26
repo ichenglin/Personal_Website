@@ -48,7 +48,7 @@ export default class PageRootHeader extends Component<Props, State> {
 				<a href="/">Home</a>
 				<a href="/projects">Projects</a>
 				<a href="/#contributions">Contributions</a>
-				<a href="https://github.com/fireclaws9" target="_blank" rel="noreferrer">Github</a>
+				<a href="https://github.com/ichenglin" target="_blank" rel="noreferrer">Github</a>
 				<a href="/contact">Contact</a>
 			</div>
         </section>;
