@@ -7,7 +7,7 @@ import { time_since } from "../../system/time_since";
 
 interface Props {};
 interface State {
-	github_profile: {}
+	github_profile: {commits: [], repositories: []}
 };
 
 export default class PageHome extends Component<Props, State> {
@@ -17,9 +17,7 @@ export default class PageHome extends Component<Props, State> {
 	constructor(props: Props) {
 		super(props);
 		this.state = {
-			github_profile: {
-				commits: []
-			}
+			github_profile: {commits: [], repositories: []}
 		};
 	}
 
@@ -79,21 +77,21 @@ export default class PageHome extends Component<Props, State> {
 				<h3 className="page_home_container_title">Latest Contributions</h3>
 				<div className="page_home_contribution_slideshow">
 					<div className="page_home_contribution_slideshow_slide">
-						{((this.state.github_profile as any).commits as Array<any>).reverse().slice(0, 9).map((value, index) => (
-						<div className="page_home_contribution_slideshow_card global_container_shadow" key={index}>
-							<div className="page_home_contribution_slideshow_card_title">
-								<h1>{value.repository.replace(/[^a-zA-Z]/g, " ")}</h1>
-								<p>{value.message}</p>
+						{(this.state.github_profile.commits as Array<any>).reverse().slice(0, 9).map((value, index) => (
+							<div className="page_home_contribution_slideshow_card global_container_shadow" key={index}>
+								<div className="page_home_contribution_slideshow_card_title">
+									<h1>{value.repository.replace(/[^a-zA-Z]/g, " ")}</h1>
+									<p>{value.message}</p>
+								</div>
+								<div className="global_container_divider"></div>
+								<img src={`https://opengraph.githubassets.com/a381e358ffe83738fffb77d8ed4b26176d436243eb9a06064512026d6bb8ad7e/ichenglin/${value.repository}`} alt={value.repository}/>
+								<div className="global_container_divider"></div>
+								<div className="page_home_contribution_slideshow_card_description">
+									<i className="fas fa-star"></i>
+									<p>{`commited ${time_since(value.date)}`}</p>
+								</div>
 							</div>
-							<div className="global_container_divider"></div>
-							<img src={`https://opengraph.githubassets.com/a381e358ffe83738fffb77d8ed4b26176d436243eb9a06064512026d6bb8ad7e/ichenglin/${value.repository}`} alt={value.repository}/>
-							<div className="global_container_divider"></div>
-							<div className="page_home_contribution_slideshow_card_description">
-								<i className="fas fa-star"></i>
-								<p>{`commited ${time_since(value.date)}`}</p>
-							</div>
-						</div>
-					))}
+						))}
 					</div>
 					<button id="page_home_contribution_slideshow_backward">
 						<i className="fas fa-chevron-left"></i>
