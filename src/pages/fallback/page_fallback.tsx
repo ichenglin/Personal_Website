@@ -14,8 +14,8 @@ export default class PageFallback extends Component<Props, State> {
 	render() {
 		return <div className="page_fallback">
 			<i className="fas fa-hammer"></i>
-            <h1>Ooops... 404 ?</h1>
+			<h1>Ooops... 404 ?</h1>
 			<p>The page you accessed does not exist or is currently under maintenance</p>
-        </div>;
+		</div>;
 	}
 }

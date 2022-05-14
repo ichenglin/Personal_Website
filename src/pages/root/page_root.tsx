@@ -17,12 +17,12 @@ export default class PageRoot extends Component<Props, State> {
 
 	constructor(props: Props) {
 		super(props);
-		PageRoot.url_analyzer = new URLAnalyzer(window.location.href);
+		PageRoot.url_analyzer = new URLAnalyzer(window.location);
 	}
 
 	render() {
 		return <>
-			<PageRootHeader float={PageRoot.url_analyzer.get_relative() === "/"}/>
+			<PageRootHeader float={PageRoot.url_analyzer.get_url_relative() === "/"}/>
 			<Router><Routes>
 				<Route path="*" element={<>
 					<PageFallback/>

@@ -1,38 +1,30 @@
-export interface URLParameter {
-
-}
-
 export class URLAnalyzer {
 
-    private url_raw: string;
-    private url_relative: string;
+    private window_location: Location;
     private url_parameters: Map<string, string>;
 
-    constructor(url_raw: string) {
-        // designed for window.location.href
-        this.url_raw = url_raw;
-        this.url_relative = this.capture_url_relative(url_raw);
-        this.url_parameters = this.capture_url_parameters(url_raw);
+    constructor(window_location: Location) {
+        this.window_location = window_location;
+        this.url_parameters = this.capture_url_parameters(window_location);
     }
 
-    private capture_url_relative(url_raw: string): string {
-		/* backdoor of useParams from react-router and react-router-dom */
-		const url_parameter_matcher = url_raw.match(/^https?:\/\/[^\/]+(.+)$/);
-		return url_parameter_matcher !== null ? url_parameter_matcher[1] : "/";
-	}
-
-    private capture_url_parameters(url_raw: string): Map<string, string> {
+    private capture_url_parameters(window_location: Location): Map<string, string> {
         const new_url_parameters = new Map<string, string>();
-        // TODO: capture url parameters here
+        window_location.search.substring(1).split("&").forEach(parameter_raw => {
+            const seperator = parameter_raw.indexOf("=");
+            const parameter_name = parameter_raw.substring(0, seperator);
+            const parameter_value = parameter_raw.substring(seperator + 1);
+            new_url_parameters.set(parameter_name, parameter_value);
+        });
         return new_url_parameters;
     }
 
-    public get_raw(): string {
-        return this.url_raw;
+    public get_url_full(): string {
+        return this.window_location.href;
     }
 
-    public get_relative(): string {
-        return this.url_relative;
+    public get_url_relative(): string {
+        return this.window_location.pathname;
     }
 
     public get_parameters(): Map<string, string> {
