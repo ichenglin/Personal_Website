@@ -73,7 +73,7 @@ export default class PageHome extends Component<Props, State> {
 					</div>
 				</div>
 			</section>
-			<section className="page_home_container page_home_contribution" id="contributions">
+			<section className="page_home_container page_home_contribution">
 				<h3 className="page_home_container_title">Latest Contributions</h3>
 				<div className="page_home_contribution_slideshow">
 					<div className="page_home_contribution_slideshow_slide">
