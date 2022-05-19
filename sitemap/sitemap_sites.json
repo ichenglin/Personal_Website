@@ -1,0 +1,17 @@
+[
+    {
+        "url": "https://runtimecloud.com",
+        "change_frequency": "daily",
+        "priority": 1.0
+    },
+    {
+        "url": "https://runtimecloud.com/projects",
+        "change_frequency": "daily",
+        "priority": 0.5
+    },
+    {
+        "url": "https://skriptstudio.runtimecloud.com",
+        "change_frequency": "daily",
+        "priority": 0.9
+    }
+]
