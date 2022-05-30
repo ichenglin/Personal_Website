@@ -34,6 +34,9 @@ export default class PageProjects extends Component<Props, State> {
 						<i className="fas fa-book"></i>
 						<h3>{repository.name.replace(/[^a-zA-Z]/g, " ")}</h3>
 						<div className="page_projects_card_tags">
+							{repository.forked ? (
+								<span data-special="true">forked</span>
+							) : null}
 							{repository.archived ? (
 								<span data-special="true">archived</span>
 							) : null}
