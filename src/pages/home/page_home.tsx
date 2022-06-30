@@ -7,7 +7,7 @@ import { time_since } from "../../system/time_since";
 
 interface Props {};
 interface State {
-	github_profile: {commits: [], repositories: []}
+	github_profile_commits: []
 };
 
 export default class PageHome extends Component<Props, State> {
@@ -17,14 +17,14 @@ export default class PageHome extends Component<Props, State> {
 	constructor(props: Props) {
 		super(props);
 		this.state = {
-			github_profile: {commits: [], repositories: []}
+			github_profile_commits: []
 		};
 	}
 
 	async componentDidMount() {
 		// load github profile from backend
-		fetch("https://backend.runtimecloud.com/profile").then(response => response.json())
-		.then(profile => {if (profile.error === false) this.setState({github_profile: profile.result})});
+		fetch("https://backend.runtimecloud.com/profile/commits").then(response => response.json())
+		.then(commits => {if (commits.error === false) this.setState({github_profile_commits: commits.result})});
 		// add event listeners for slider buttons
 		const contribution_slider_forward = document.getElementById("page_home_contribution_slideshow_forward") as HTMLElement;
 		const contribution_slider_backward = document.getElementById("page_home_contribution_slideshow_backward") as HTMLElement;
@@ -77,7 +77,7 @@ export default class PageHome extends Component<Props, State> {
 				<h3 className="page_home_container_title">Latest Contributions</h3>
 				<div className="page_home_contribution_slideshow">
 					<div className="page_home_contribution_slideshow_slide">
-						{(this.state.github_profile.commits as Array<any>).reverse().slice(0, 9).map((value, index) => (
+						{(this.state.github_profile_commits as Array<any>).reverse().slice(0, 9).map((value, index) => (
 							<div className="page_home_contribution_slideshow_card global_container_shadow" key={index}>
 								<div className="page_home_contribution_slideshow_card_title">
 									<h1>{value.repository.replace(/[^a-zA-Z]/g, " ")}</h1>
