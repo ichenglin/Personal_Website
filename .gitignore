@@ -1,4 +1,5 @@
 /node_modules
 /build
+/public/resources/fontawesome
 
 /src/pages/template
