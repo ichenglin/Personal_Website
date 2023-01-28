@@ -1,13 +1,14 @@
 import { GetServerSideProps } from "next";
+import type { NextPageLayout } from "./_app";
 import styles from "@/styles/Home.module.css";
 
-export default function Home() {
+const Home: NextPageLayout = () => {
 	return (
 		<main className={styles.main}>
 			Home Page
 		</main>
 	);
-}
+};
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	return {props: {
@@ -15,3 +16,5 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 		page_description: "The home page of RuntimeCloud."
 	}};
 }
+
+export default Home;

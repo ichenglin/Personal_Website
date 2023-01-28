@@ -1,8 +1,20 @@
 import "@/styles/globals.css";
+import type { ReactElement, ReactNode } from "react";
+import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-export default function App({ Component, pageProps }: AppProps) {
+// custom page layout type definitions
+export type NextPageLayout<P = {}, IP = P> = NextPage<P, IP> & {
+	getLayout?: (page: ReactElement) => ReactNode
+}
+type AppPropsLayout = AppProps & {
+	Component: NextPageLayout
+}
+
+export default function App({ Component, pageProps }: AppPropsLayout) {
+	// custom page layout if available
+	const page_layout = Component.getLayout ?? ((page) => page);
 	return <>
 		<Head>
 			<meta charSet="utf-8" />
@@ -20,6 +32,6 @@ export default function App({ Component, pageProps }: AppProps) {
 			<link rel="apple-touch-icon" href="/logo192.png"   crossOrigin="use-credentials"/>
 			<link rel="manifest"         href="/manifest.json" crossOrigin="use-credentials"/>
 		</Head>
-		<Component {...pageProps} />
+		{page_layout(<Component {...pageProps} />)}
 	</>;
 }
