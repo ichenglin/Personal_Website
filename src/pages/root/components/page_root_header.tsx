@@ -47,8 +47,8 @@ export default class PageRootHeader extends Component<Props, State> {
 				<i className="fas fa-ellipsis-v" onClick={() => this.header_expand_toggle()}></i>
 				<a href="/">Home</a>
 				<a href="/projects">Projects</a>
-				<a href="https://skriptstudio.runtimecloud.com/" target="_blank" rel="noreferrer">Skript Studio</a>
-				<a href="https://github.com/ichenglin" target="_blank" rel="noreferrer">Github</a>
+				<a href="https://skriptstudio.runtimecloud.com/">Skript Studio</a>
+				<a href="https://github.com/ichenglin">Github</a>
 				<a href="/contact">Contact</a>
 			</div>
         </section>;

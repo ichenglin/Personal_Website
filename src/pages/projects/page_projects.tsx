@@ -29,7 +29,7 @@ export default class PageProjects extends Component<Props, State> {
 				<h1>Projects</h1>
 			</section>
             <section className="page_projects_container">
-				{(this.state.github_profile_repositories as any[]).sort((a, b) => b.created - a.created).map((repository, index) => (
+				{(this.state.github_profile_repositories as any[]).sort((a, b) => b.created - a.created).filter(repository => !repository.forked).map((repository, index) => (
 					<div className="global_container_shadow page_projects_card" key={index}>
 						<i className="fas fa-book"></i>
 						<h3>{repository.name.replace(/[^a-zA-Z]/g, " ")}</h3>
