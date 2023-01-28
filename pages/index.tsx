@@ -13,7 +13,7 @@ const Home: NextPageLayout = () => {
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	return {props: {
 		page_name:        "Home",
-		page_description: "The home page of RuntimeCloud."
+		page_description: "The home page of RuntimeCloud"
 	}};
 }
 
