@@ -3,6 +3,8 @@ import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import PageHeader from "@/components/page_header";
+import PageFooter from "@/components/page_footer";
 
 // custom page layout type definitions
 export type NextPageLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -36,6 +38,8 @@ export default function App({ Component, pageProps }: AppPropsLayout) {
 			<link rel="apple-touch-icon" href="/logo192.png"   crossOrigin="use-credentials"/>
 			<link rel="manifest"         href="/manifest.json" crossOrigin="use-credentials"/>
 		</Head>
+		<PageHeader/>
 		{page_layout(<Component {...pageProps} />)}
+		<PageFooter/>
 	</>;
 }
