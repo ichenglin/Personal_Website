@@ -5,6 +5,11 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import PageHeader from "@/components/page_header";
 import PageFooter from "@/components/page_footer";
+import { config } from "@fortawesome/fontawesome-svg-core"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+
+// fontawesome implementation
+config.autoAddCss = false;
 
 // custom page layout type definitions
 export type NextPageLayout<P = {}, IP = P> = NextPage<P, IP> & {
