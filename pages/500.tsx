@@ -1,4 +1,3 @@
-import { GetServerSideProps } from "next";
 import type { NextPageLayout } from "./_app";
 
 const Error500: NextPageLayout = () => {

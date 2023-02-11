@@ -1,6 +1,6 @@
 import { GetServerSideProps } from "next";
 import type { NextPageLayout } from "./_app";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/pages/Home.module.css";
 
 const Home: NextPageLayout = () => {
 	return (
