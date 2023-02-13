@@ -5,8 +5,15 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import PageHeader from "@/components/page_header";
 import PageFooter from "@/components/page_footer";
+
+// fonts
+import { Inter } from "@next/font/google";
+
+// icons
 import { config } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
+
+const font_inter = Inter({subsets: ["latin"]});
 
 // fontawesome implementation
 config.autoAddCss = false;
@@ -44,7 +51,9 @@ export default function App({ Component, pageProps }: AppPropsLayout) {
 			<link rel="manifest"         href="/manifest.json" crossOrigin="use-credentials"/>
 		</Head>
 		<PageHeader/>
-		{page_layout(<Component {...pageProps} />)}
+		<main className={font_inter.className}>
+			{page_layout(<Component {...pageProps} />)}
+		</main>
 		<PageFooter/>
 	</>;
 }

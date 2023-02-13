@@ -1,9 +1,7 @@
-.home {
-	height: 100%;
-}
+/* cover section */
 
 .cover {
-	height: calc(100% - 60px);
+	height: calc(100vh - 60px);
 	margin-left: 100px;
 	display: flex;
 	flex-direction: column;
@@ -14,7 +12,7 @@
 .cover::before {
 	content: "";
 	width: 100%;
-    height: calc(100% - 60px);
+    height: calc(100vh - 60px);
     position: fixed;
     top: 60px;
     left: 0px;
@@ -74,7 +72,7 @@
 	border: 3px solid #007ACC;
 }
 
-.featured {
+.slide {
 	width: auto;
 	height: 70%;
 	position: absolute;
@@ -82,4 +80,11 @@
 	left: 50%;
 	border: 3px solid #007ACC;
 	border-radius: 10px;
+}
+
+/* featured projects section */
+
+.featured {
+	height: 150px;
+	background-color: white;
 }

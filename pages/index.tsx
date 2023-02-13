@@ -37,19 +37,19 @@ const Home: NextPageLayout = () => {
 			featured_index         = (featured_index + 1) % projects_featured.length;
 			// render the background
 			for (let project_index = 0; project_index < projects_featured.length; project_index++) {
-				const project_element = document.getElementsByClassName(styles.featured)[project_index] as HTMLElement;
+				const project_element = document.getElementsByClassName(styles.slide)[project_index] as HTMLElement;
 				if (project_element === undefined) continue;
 				project_element.style.opacity = (project_index === featured_index || project_index === background_index) ? "1" : "0";
 				project_element.style.zIndex  = (project_index === featured_index)                                       ? "2" : "1";
 			}
 			// animate the new featured project
-			const featured_element = document.getElementsByClassName(styles.featured)[featured_index] as HTMLElement;
+			const featured_element = document.getElementsByClassName(styles.slide)[featured_index] as HTMLElement;
 			if (featured_element !== undefined) featured_element.animate(featured_animation.keyframes, featured_animation.options);
 		}, 2000);
 	}, []);
 
 	return (
-		<div className={`${styles.home} ${font_inter.className}`}>
+		<>
 			<section className={styles.cover}>
 				<div className={styles.title}>
 					<h1>I do stuff ._.</h1>
@@ -67,11 +67,14 @@ const Home: NextPageLayout = () => {
 				</div>
 				<div>
 					{projects_featured.map((project, index) => (
-						<Image className={styles.featured} src={project.image.source} alt={project.name} width={project.image.width} height={project.image.height} key={index}/>
+						<Image className={styles.slide} src={project.image.source} alt={project.name} width={project.image.width} height={project.image.height} key={index}/>
 					))}
 				</div>
 			</section>
-		</div>
+			<section className={styles.featured}>
+				
+			</section>
+		</>
 	);
 };
 
