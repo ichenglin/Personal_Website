@@ -47,13 +47,14 @@ const Home: NextPageLayout = () => {
 
 	return (
 		<>
+			<span className="header_offset" id="cover"/>
 			<section className={styles.cover}>
 				<div className={styles.title}>
 					<h1>I do stuff ._.</h1>
 					<h3>Projects Made by Icheng Lin</h3>
 				</div>
 				<div className={styles.navbar}>
-					<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "#projects")}>
+					<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "/", "#projects")}>
 						<FontAwesomeIcon icon={faTerminal} width="14" height="14"/>
 						<span>Projects</span>
 					</a>
@@ -68,8 +69,8 @@ const Home: NextPageLayout = () => {
 					))}
 				</div>
 			</section>
+			<span className="header_offset" id="projects"/>
 			<section className={styles.featured}>
-				<span className="header_offset" id="projects"/>
 				Featured Projects
 			</section>
 		</>

@@ -20,8 +20,8 @@ const PageHeader: NextPageLayout = () => {
 				<h1>Runtime Cloud</h1>
 			</div>
 			<nav className={styles.navbar}>
-				<a className={styles.item} href="/">Home</a>
-				<a className={styles.item} href="#projects" onClick={(event: any) => silent_scroll(event, "#projects")}>Projects</a>
+				<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "/", "#cover")}>Home</a>
+				<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "/", "#projects")}>Projects</a>
 				<a className={styles.item} href="https://skriptstudio.runtimecloud.com/">Skript Studio</a>
 			</nav>
 			<a className={styles.contact} href="https://github.com/ichenglin">
