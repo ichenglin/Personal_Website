@@ -51,14 +51,15 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
+	transition: 0.3s;
 }
 
-.item > svg {
-	margin-right: 5px;
+.item:hover {
+	filter: brightness(120%);
 }
 
-.item > span {
-	font-weight: 500;
+.item:active {
+	filter: brightness(90%);
 }
 
 .item:nth-child(1) {
@@ -70,6 +71,14 @@
 	color: #007ACC;
 	background-color: #DAE9F2;
 	border: 3px solid #007ACC;
+}
+
+.item > svg {
+	margin-right: 5px;
+}
+
+.item > span {
+	font-weight: 500;
 }
 
 .slide {

@@ -43,6 +43,10 @@
     opacity: 1;
 }
 
+.item:active {
+    filter: brightness(90%);
+}
+
 .contact {
     height: 30px;
     padding: 0px 15px;
