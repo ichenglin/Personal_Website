@@ -5,8 +5,8 @@ import styles from "@/styles/components/Header.module.css";
 import icon_image from "../public/android-chrome-192x192.png";
 import { Audiowide, Inter } from "@next/font/google";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const font_audiowide = Audiowide({weight: "400"});
 const font_inter     = Inter({subsets: ["latin"]});
