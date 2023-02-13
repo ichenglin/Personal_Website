@@ -3,9 +3,7 @@ import { GetServerSideProps } from "next";
 import Image from "next/image";
 import type { NextPageLayout } from "./_app";
 import styles from "@/styles/pages/Home.module.css";
-
-// fonts
-import { Inter } from "@next/font/google";
+import silent_scroll from "@/utilities/silent_scroll";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +13,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 // data
 import projects_featured from "@/data/projects_featured.json";
 
-const font_inter = Inter({subsets: ["latin"]});
 const featured_animation = {
 	keyframes: [
 		{opacity: "0"},
@@ -56,7 +53,7 @@ const Home: NextPageLayout = () => {
 					<h3>Projects Made by Icheng Lin</h3>
 				</div>
 				<div className={styles.navbar}>
-					<a className={styles.item} href="#projects">
+					<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "#projects")}>
 						<FontAwesomeIcon icon={faTerminal} width="14" height="14"/>
 						<span>Projects</span>
 					</a>
@@ -72,7 +69,8 @@ const Home: NextPageLayout = () => {
 				</div>
 			</section>
 			<section className={styles.featured}>
-				
+				<span className="header_offset" id="projects"/>
+				Featured Projects
 			</section>
 		</>
 	);

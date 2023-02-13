@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { NextPageLayout } from "../pages/_app";
 import styles from "@/styles/components/Header.module.css";
+import silent_scroll from "@/utilities/silent_scroll";
 
 import icon_image from "../public/android-chrome-192x192.png";
 import { Audiowide, Inter } from "@next/font/google";
@@ -20,7 +21,7 @@ const PageHeader: NextPageLayout = () => {
 			</div>
 			<nav className={styles.navbar}>
 				<a className={styles.item} href="/">Home</a>
-				<a className={styles.item} href="#projects">Projects</a>
+				<a className={styles.item} href="#projects" onClick={(event: any) => silent_scroll(event, "#projects")}>Projects</a>
 				<a className={styles.item} href="https://skriptstudio.runtimecloud.com/">Skript Studio</a>
 			</nav>
 			<a className={styles.contact} href="https://github.com/ichenglin">
