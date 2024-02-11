@@ -1,0 +1,16 @@
+.reference {
+    color: #0069FF;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.reference > svg {
+    margin-left: 8px;
+    margin-right: 4px;
+    transition-duration: 0.3s;
+}
+
+.reference:hover > svg {
+    margin-left: 12px;
+    margin-right: 0px;
+}

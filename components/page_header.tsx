@@ -23,6 +23,8 @@ const PageHeader: NextPageLayout = () => {
 				<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "/", "#cover")}>Home</a>
 				<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "/", "#projects")}>Projects</a>
 				<a className={styles.item} href="https://skriptstudio.runtimecloud.com/">Skript Studio</a>
+				<a className={styles.item} href="https://tankon.runtimecloud.com/">Tankon</a>
+				<a className={styles.item} href="https://vexrify.runtimecloud.com/">Vexrify</a>
 			</nav>
 			<a className={styles.contact} href="https://github.com/ichenglin">
 				<FontAwesomeIcon icon={faGithub} width="14" height="14"/>

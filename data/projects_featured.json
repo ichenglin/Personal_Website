@@ -1,26 +1,32 @@
 [
     {
         "name": "Skript Studio",
+        "description": "An online code editor made for Skript with built-in syntax highlighting, syntax autocomplete, and obfuscator.",
         "image": {
             "source": "/images/skript_studio.png",
             "width": 1920,
             "height": 1080
-        }
+        },
+        "reference": "https://skriptstudio.runtimecloud.com"
     },
     {
         "name": "Roblox FPS Unlocker Auto Updater",
+        "description": "An application that automatically updates Roblox FPS Unlocker from axstin/rbxfpsunlocker, whenever a new version is found available.",
         "image": {
             "source": "/images/roblox_fps_unlocker_auto_updater.png",
             "width": 1920,
             "height": 1080
-        }
+        },
+        "reference": "https://github.com/ichenglin/Roblox_FPS_Unlocker_Auto_Updater"
     },
     {
         "name": "CubedCraft File Uploader",
+        "description": "An open-source application made to simplify the complex process of server developments in CubedCraft. Automatically sync server files with local working directory when changes are applied.",
         "image": {
             "source": "/images/cubedcraft_file_uploader.png",
             "width": 1920,
             "height": 1080
-        }
+        },
+        "reference": "https://github.com/ichenglin/CubedCraft_File_Uploader"
     }
 ]

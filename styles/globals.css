@@ -22,3 +22,7 @@ span.header_offset {
     top: -60px;
 	visibility: hidden;
 }
+
+.container_shadow {
+    box-shadow: rgb(212, 212, 213) 0px 1px 3px 0px, rgb(212, 212, 213) 0px 0px 0px 1px;
+}

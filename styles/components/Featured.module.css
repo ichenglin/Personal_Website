@@ -1,0 +1,50 @@
+.featured {
+    padding: 50px max((100vw - 1500px) / 2, 50px);
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: calc((100% - 100px) / 3) calc((100% - 100px) / 3) calc((100% - 100px) / 3);
+    gap: 50px;
+    background-color: #DAE9F2;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.title > h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project_information {
+    padding: 20px;
+}
+
+.project_information > h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.project_information > p {
+    font-size: 18px;
+}
+
+.project_reference {
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: auto;
+}
