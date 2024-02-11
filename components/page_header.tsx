@@ -17,7 +17,7 @@ const PageHeader: NextPageLayout = () => {
 		<header className={`${styles.header} ${font_inter.className}`}>
 			<div className={`${styles.icon} ${font_audiowide.className}`}>
 				<Image src={icon_image} width="30" height="30" alt="Icon" />
-				<h1>Runtime Cloud</h1>
+				<h1>Icheng Lin</h1>
 			</div>
 			<nav className={styles.navbar}>
 				<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "/", "#cover")}>Home</a>

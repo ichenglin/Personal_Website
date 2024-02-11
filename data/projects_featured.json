@@ -1,7 +1,25 @@
 [
     {
+        "name": "Vexrify",
+        "description": "Vexrify discord bot assists Vex Robotics communities with statistics lookup and identity verification services.",
+        "dates": {
+            "begin": "Unknown",
+            "end": "Unknown"
+        },
+        "image": {
+            "source": "/images/vexrify.png",
+            "width": 1920,
+            "height": 1080
+        },
+        "reference": "https://vexrify.runtimecloud.com"
+    },
+    {
         "name": "Skript Studio",
         "description": "An online code editor made for Skript with built-in syntax highlighting, syntax autocomplete, and obfuscator.",
+        "dates": {
+            "begin": "Unknown",
+            "end": "Unknown"
+        },
         "image": {
             "source": "/images/skript_studio.png",
             "width": 1920,
@@ -10,8 +28,26 @@
         "reference": "https://skriptstudio.runtimecloud.com"
     },
     {
-        "name": "Roblox FPS Unlocker Auto Updater",
+        "name": "Tankon",
+        "description": "(Project Description Placeholder)",
+        "dates": {
+            "begin": "Unknown",
+            "end": "Unknown"
+        },
+        "image": {
+            "source": "/images/tankon.png",
+            "width": 1920,
+            "height": 1080
+        },
+        "reference": "https://tankon.runtimecloud.com"
+    },
+    {
+        "name": "FPS Unlock Updater",
         "description": "An application that automatically updates Roblox FPS Unlocker from axstin/rbxfpsunlocker, whenever a new version is found available.",
+        "dates": {
+            "begin": "Unknown",
+            "end": "Unknown"
+        },
         "image": {
             "source": "/images/roblox_fps_unlocker_auto_updater.png",
             "width": 1920,
@@ -22,11 +58,29 @@
     {
         "name": "CubedCraft File Uploader",
         "description": "An open-source application made to simplify the complex process of server developments in CubedCraft. Automatically sync server files with local working directory when changes are applied.",
+        "dates": {
+            "begin": "Unknown",
+            "end": "Unknown"
+        },
         "image": {
             "source": "/images/cubedcraft_file_uploader.png",
             "width": 1920,
             "height": 1080
         },
         "reference": "https://github.com/ichenglin/CubedCraft_File_Uploader"
+    },
+    {
+        "name": "Sladden",
+        "description": "(Project Description Placeholder)",
+        "dates": {
+            "begin": "Unknown",
+            "end": "Unknown"
+        },
+        "image": {
+            "source": "/images/sladden.png",
+            "width": 1920,
+            "height": 1080
+        },
+        "reference": "https://github.com/ichenglin/Skript_Sladden"
     }
 ]
