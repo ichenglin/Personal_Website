@@ -8,8 +8,8 @@
         },
         "image": {
             "source": "/images/vexrify.png",
-            "width": 1920,
-            "height": 1080
+            "width": 1280,
+            "height": 640
         },
         "reference": "https://vexrify.runtimecloud.com"
     },
@@ -22,8 +22,8 @@
         },
         "image": {
             "source": "/images/skript_studio.png",
-            "width": 1920,
-            "height": 1080
+            "width": 1280,
+            "height": 640
         },
         "reference": "https://skriptstudio.runtimecloud.com"
     },
@@ -36,8 +36,8 @@
         },
         "image": {
             "source": "/images/tankon.png",
-            "width": 1920,
-            "height": 1080
+            "width": 1280,
+            "height": 640
         },
         "reference": "https://tankon.runtimecloud.com"
     },
@@ -50,8 +50,8 @@
         },
         "image": {
             "source": "/images/roblox_fps_unlocker_auto_updater.png",
-            "width": 1920,
-            "height": 1080
+            "width": 1280,
+            "height": 640
         },
         "reference": "https://github.com/ichenglin/Roblox_FPS_Unlocker_Auto_Updater"
     },
@@ -64,8 +64,8 @@
         },
         "image": {
             "source": "/images/cubedcraft_file_uploader.png",
-            "width": 1920,
-            "height": 1080
+            "width": 1280,
+            "height": 640
         },
         "reference": "https://github.com/ichenglin/CubedCraft_File_Uploader"
     },
@@ -78,8 +78,8 @@
         },
         "image": {
             "source": "/images/sladden.png",
-            "width": 1920,
-            "height": 1080
+            "width": 1280,
+            "height": 640
         },
         "reference": "https://github.com/ichenglin/Skript_Sladden"
     }

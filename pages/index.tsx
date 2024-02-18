@@ -8,8 +8,11 @@ import PageFeatured from "@/components/page_featured";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useRouter } from "next/router";
 
 const Home: NextPageLayout = () => {
+
+	const router = useRouter();
 
 	return (
 		<>
@@ -20,7 +23,7 @@ const Home: NextPageLayout = () => {
 					<h3>Projects Made by Icheng Lin</h3>
 				</div>
 				<div className={styles.navbar}>
-					<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "/", "#projects")}>
+					<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "/", "#projects", router)}>
 						<FontAwesomeIcon icon={faTerminal} width="14" height="14"/>
 						<span>Projects</span>
 					</a>
