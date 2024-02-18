@@ -1,4 +1,6 @@
 import { GetServerSideProps } from "next";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import type { NextPageLayout } from "./_app";
 import styles from "@/styles/pages/Home.module.css";
 import silent_scroll from "@/utilities/silent_scroll";
@@ -8,7 +10,6 @@ import PageFeatured from "@/components/page_featured";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { useRouter } from "next/router";
 
 const Home: NextPageLayout = () => {
 
@@ -23,10 +24,10 @@ const Home: NextPageLayout = () => {
 					<h3>Projects Made by Icheng Lin</h3>
 				</div>
 				<div className={styles.navbar}>
-					<a className={styles.item} href="" onClick={(event: any) => silent_scroll(event, "/", "#projects", router)}>
+					<Link className={styles.item} href="/#projects" onClick={(event: any) => silent_scroll(event, "/", "#projects", router)}>
 						<FontAwesomeIcon icon={faTerminal} width="14" height="14"/>
 						<span>Projects</span>
-					</a>
+					</Link>
 					<a className={styles.item} href="https://github.com/ichenglin">
 						<FontAwesomeIcon icon={faGithub} width="14" height="14"/>
 						<span>Github</span>
