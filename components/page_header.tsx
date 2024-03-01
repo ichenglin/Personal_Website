@@ -20,7 +20,7 @@ const PageHeader: NextPageLayout = () => {
 
 	return (
 		<header className={`${styles.header} ${font_inter.className}`}>
-			<Link className={`${styles.icon} ${font_audiowide.className}`} href="/">
+			<Link className={`${styles.icon} ${font_audiowide.className}`} href="/" onClick={(event: any) => silent_scroll(event, "/", "#cover", router)}>
 				<Image src={icon_image} width="30" height="30" alt="Icon" />
 				<h1>Icheng Lin</h1>
 			</Link>

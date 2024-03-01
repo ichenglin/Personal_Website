@@ -21,7 +21,7 @@ const Home: NextPageLayout = () => {
 			<section className={styles.cover}>
 				<div className={styles.title}>
 					<h1>I do stuff ._.</h1>
-					<h3>Projects Made by Icheng Lin</h3>
+					<h3>Projects made by <b>Icheng Lin</b></h3>
 				</div>
 				<div className={styles.navbar}>
 					<Link className={styles.item} href="/#projects" onClick={(event: any) => silent_scroll(event, "/", "#projects", router)}>
