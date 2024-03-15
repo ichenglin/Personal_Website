@@ -38,9 +38,9 @@ export default function App({ Component, pageProps }: AppPropsLayout) {
 			<meta charSet="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-			<title>{`${page_fallback.page_name} • RuntimeCloud`}</title>
+			<title>{`${page_fallback.page_name} • Icheng Lin`}</title>
 
-			<meta property="og:title"       content={`${page_fallback.page_name } • RuntimeCloud`} />
+			<meta property="og:title"       content={`${page_fallback.page_name} • Icheng Lin`} />
 			<meta property="og:image"       content="https://runtimecloud.com/android-chrome-192x192.png"/>
 			<meta property="og:description" content={page_fallback.page_description} />
 			<meta name="description"        content={page_fallback.page_description} />

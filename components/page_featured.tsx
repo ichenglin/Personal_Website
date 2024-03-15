@@ -4,18 +4,12 @@ import styles from "@/styles/components/Featured.module.css";
 
 // fonts
 import { Dosis } from "@next/font/google";
-import { JetBrains_Mono } from "@next/font/google";
-
-// icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 // data
 import projects_featured from "@/data/projects_featured.json";
 import ObjectReference from "./object_reference";
 
-const font_dosis     = Dosis({subsets: ["latin"]});
-const font_jetbrains = JetBrains_Mono({subsets: ["latin"]});
+const font_dosis = Dosis({subsets: ["latin"]});
 
 const PageFeatured: NextPageLayout = () => {
 	return (
