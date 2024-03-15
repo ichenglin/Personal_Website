@@ -9,6 +9,8 @@ import icon_image from "../public/android-chrome-192x192.png";
 import { Audiowide, Inter } from "@next/font/google";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse, faDiagramProject } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const font_audiowide = Audiowide({weight: "400"});
@@ -25,11 +27,22 @@ const PageHeader: NextPageLayout = () => {
 				<h1>Icheng Lin</h1>
 			</Link>
 			<nav className={styles.navbar}>
-				<Link className={styles.item} href="/#cover" onClick={(event: any) => silent_scroll(event, "/", "#cover", router)}>Home</Link>
-				<Link className={styles.item} href="/#projects" onClick={(event: any) => silent_scroll(event, "/", "#projects", router)}>Projects</Link>
-				<Link className={styles.item} href="https://skriptstudio.runtimecloud.com/">Skript Studio</Link>
-				<Link className={styles.item} href="https://tankon.runtimecloud.com/">Tankon</Link>
-				<Link className={styles.item} href="https://vexrify.runtimecloud.com/">Vexrify</Link>
+				<Link className={styles.item} href="/#cover"    onClick={(event: any) => silent_scroll(event, "/", "#cover", router)}>
+					<FontAwesomeIcon icon={faHouse} width="14" height="14"/>
+					<span>Home</span>
+				</Link>
+				<Link className={styles.item} href="/#projects" onClick={(event: any) => silent_scroll(event, "/", "#projects", router)}>
+					<FontAwesomeIcon icon={faDiagramProject} width="14" height="14"/>
+					<span>Projects</span>
+				</Link>
+				<Link className={styles.item} href="https://www.linkedin.com/in/ichenglin/">
+					<FontAwesomeIcon icon={faLinkedin} width="14" height="14"/>
+					<span>LinkedIn</span>
+				</Link>
+				<Link className={styles.item} href="https://github.com/ichenglin">
+					<FontAwesomeIcon icon={faGithub} width="14" height="14"/>
+					<span>Github</span>
+				</Link>
 			</nav>
 			<Link className={styles.contact} href="https://github.com/ichenglin">
 				<FontAwesomeIcon icon={faGithub} width="14" height="14"/>
