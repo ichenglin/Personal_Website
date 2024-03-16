@@ -19,6 +19,7 @@ const Home: NextPageLayout = () => {
 		<>
 			<span className="header_offset" id="cover"/>
 			<section className={styles.cover}>
+				<video src="images/ic_walking.mp4" autoPlay muted loop playsInline></video>
 				<div className={styles.title}>
 					<h1>I do stuff ._.</h1>
 					<h3>Projects made by <b>Icheng Lin</b></h3>
@@ -32,9 +33,6 @@ const Home: NextPageLayout = () => {
 						<FontAwesomeIcon icon={faGithub} width="14" height="14"/>
 						<span>Github</span>
 					</a>
-				</div>
-				<div>
-					
 				</div>
 			</section>
 			<section className={styles.divider_1}>

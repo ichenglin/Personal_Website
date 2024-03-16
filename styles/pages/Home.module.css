@@ -23,6 +23,16 @@
 	z-index: -100;
 }
 
+.cover > video {
+	width: 100%;
+	height: calc(100vh - 60px - 120px);
+	position: fixed;
+	top: 60px;
+	left: 0px;
+	z-index: -1;
+	object-fit: cover;
+}
+
 .title {
 	display: flex;
 	flex-direction: column;
