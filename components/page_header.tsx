@@ -39,7 +39,7 @@ const PageHeader: NextPageLayout = () => {
 					<FontAwesomeIcon icon={faEnvelopeCircleCheck} width="14" height="14"/>
 					<span>Contacts</span>
 				</Link>
-				<Link className={styles.item} href="https://www.linkedin.com/in/ichenglin/">
+				<Link className={styles.item} href="https://www.linkedin.com/in/ichenglin">
 					<FontAwesomeIcon icon={faLinkedin} width="14" height="14"/>
 					<span>LinkedIn</span>
 				</Link>
