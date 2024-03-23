@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/components/Featured.module.css";
 
 // fonts
-import { Dosis } from "@next/font/google";
+import { Dosis } from "next/font/google";
 
 // data
 import projects_featured from "@/data/projects_featured.json";

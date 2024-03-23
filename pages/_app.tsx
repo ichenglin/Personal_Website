@@ -7,7 +7,7 @@ import PageHeader from "@/components/page_header";
 import PageFooter from "@/components/page_footer";
 
 // fonts
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 
 // icons
 import { config } from "@fortawesome/fontawesome-svg-core"

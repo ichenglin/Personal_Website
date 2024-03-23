@@ -2,7 +2,7 @@ import type { NextPageLayout } from "../pages/_app";
 import styles from "@/styles/components/Reference.module.css";
 
 // fonts
-import { JetBrains_Mono } from "@next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

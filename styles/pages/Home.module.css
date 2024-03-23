@@ -101,23 +101,28 @@
 	border-radius: 10px;
 }
 
+.skills {
+	height: 100vh;
+	background-color: #9CD0F0;
+}
+
 /* cover-project divider */
 
-.divider_1 {
+.section_divider {
 	position: relative;
 }
 
-.divider_1 > div {
+.section_divider > div {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 0px;
+    left: 0px;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
 }
 
-.divider_1 > div > svg {
+.section_divider > div > svg {
     position: relative;
     display: block;
     width: calc(106% + 1.3px);
@@ -126,6 +131,12 @@
 
 }
 
-.divider_1 > div > svg > path {
+.section_divider > div > svg > path {
     fill: #DAE9F2;
+}
+
+.section_divider_inverted > div {
+	top: 0px;
+	bottom: unset;
+	transform: rotate(0deg);
 }

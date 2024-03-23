@@ -6,14 +6,14 @@ import styles from "@/styles/components/Header.module.css";
 import silent_scroll from "@/utilities/silent_scroll";
 
 import icon_image from "../public/android-chrome-192x192.png";
-import { Audiowide, Inter } from "@next/font/google";
+import { Audiowide, Inter } from "next/font/google";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faDiagramProject } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
+import { faHouse, faDiagramProject, faEnvelopeCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const font_audiowide = Audiowide({weight: "400"});
+const font_audiowide = Audiowide({subsets: ["latin"], weight: "400"});
 const font_inter     = Inter({subsets: ["latin"]});
 
 const PageHeader: NextPageLayout = () => {
@@ -34,6 +34,10 @@ const PageHeader: NextPageLayout = () => {
 				<Link className={styles.item} href="/#projects" onClick={(event: any) => silent_scroll(event, "/", "#projects", router)}>
 					<FontAwesomeIcon icon={faDiagramProject} width="14" height="14"/>
 					<span>Projects</span>
+				</Link>
+				<Link className={styles.item} href="/#contacts" onClick={(event: any) => silent_scroll(event, "/", "#contacts", router)}>
+					<FontAwesomeIcon icon={faEnvelopeCircleCheck} width="14" height="14"/>
+					<span>Contacts</span>
 				</Link>
 				<Link className={styles.item} href="https://www.linkedin.com/in/ichenglin/">
 					<FontAwesomeIcon icon={faLinkedin} width="14" height="14"/>
