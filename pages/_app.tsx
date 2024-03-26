@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppPropsLayout) {
 	// custom page layout if available
 	const page_layout   = Component.getLayout ?? ((page) => page);
 	const page_fallback = {
-		page_name:        (pageProps.page_name        !== undefined ? pageProps.page_name        : "Error"),
+		page_name:        (pageProps.page_name        !== undefined ? pageProps.page_name        : "Not Found"),
 		page_description: (pageProps.page_description !== undefined ? pageProps.page_description : ""),
 	};
 	return <>
