@@ -17,6 +17,7 @@ const Error404: NextPageLayout = () => {
 			<div className={`${styles.window} ${font_dosis.className}`}>
 				<FontAwesomeIcon icon={faHammer}/>
 				<h5>Ooops... 404?</h5>
+				<p>The page you accessed does not exist or is currently under maintenance</p>
 				<ObjectReference message="Return to Home" href="/"/>
 			</div>
 		</section>

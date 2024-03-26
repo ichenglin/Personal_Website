@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .window > svg {
@@ -21,6 +22,15 @@
 .window > h5 {
     font-size: 60px;
     font-weight: 600;
+}
+
+.window > p {
+    max-width: min(600px, 90vw);
+    font-size: 40px;
+}
+
+.window > a {
+    margin-top: 30px;
 }
 
 @keyframes hammer_action {

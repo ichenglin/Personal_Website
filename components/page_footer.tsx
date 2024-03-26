@@ -33,11 +33,11 @@ const PageFooter: NextPageLayout = () => {
 					<FontAwesomeIcon icon={faLinkedin} width="14" height="14"/>
 					<span>LinkedIn</span>
 				</Link>
-				<Link className={styles.item} href="/">
+				<Link className={styles.item} href="/resume">
 					<FontAwesomeIcon icon={faFileLines} width="14" height="14"/>
 					<span>Resume</span>
 				</Link>
-				<Link className={styles.item} href="sitemap.xml">
+				<Link className={styles.item} href="/sitemap.xml">
 					<FontAwesomeIcon icon={faMapLocationDot} width="14" height="14"/>
 					<span>Sitemap</span>
 				</Link>
