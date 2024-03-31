@@ -1,13 +1,14 @@
 import type { NextPageLayout } from "../pages/_app";
 import Image from "next/image";
 import styles from "@/styles/components/Featured.module.css";
+import ObjectReference from "./object_reference";
 
 // fonts
 import { Dosis } from "next/font/google";
 
 // data
-import projects_featured from "@/data/projects_featured.json";
-import ObjectReference from "./object_reference";
+import data_projects from "@/data/data_projects.json";
+import data_links from "@/data/data_links.json";
 
 const font_dosis = Dosis({subsets: ["latin"]});
 
@@ -16,9 +17,9 @@ const PageFeatured: NextPageLayout = () => {
 		<section className={styles.featured}>
             <div className={`${styles.title} ${font_dosis.className}`}>
                 <h1>Personal Projects</h1>
-                <ObjectReference message="See All Projects" href="https://github.com/ichenglin"/>
+                <ObjectReference message="See All Projects" href={data_links.link_github}/>
             </div>
-            {projects_featured.map((project_data, project_index) => <div className={`${styles.project} container_shadow`} key={project_index}>
+            {data_projects.map((project_data, project_index) => <div className={`${styles.project} container_shadow`} key={project_index}>
                 <div className={styles.project_demo}>
                     <Image src={project_data.image.source} alt={project_data.name} width={project_data.image.width} height={project_data.image.height}/>
                 </div>

@@ -11,6 +11,9 @@ import { faHeart, faFileLines, faMapLocationDot } from "@fortawesome/free-solid-
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
+// data
+import data_links from "@/data/data_links.json";
+
 const font_inter = Inter({subsets: ["latin"]});
 
 const PageFooter: NextPageLayout = () => {
@@ -25,11 +28,11 @@ const PageFooter: NextPageLayout = () => {
 				</p>
 			</div>
 			<div className={styles.navbar}>
-				<Link className={styles.item} href="https://github.com/ichenglin">
+				<Link className={styles.item} href={data_links.link_github}>
 					<FontAwesomeIcon icon={faGithub} width="14" height="14"/>
 					<span>Github</span>
 				</Link>
-				<Link className={styles.item} href="https://www.linkedin.com/in/ichenglin">
+				<Link className={styles.item} href={data_links.link_linkedin}>
 					<FontAwesomeIcon icon={faLinkedin} width="14" height="14"/>
 					<span>LinkedIn</span>
 				</Link>

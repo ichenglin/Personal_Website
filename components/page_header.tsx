@@ -4,14 +4,19 @@ import Link from "next/link";
 import type { NextPageLayout } from "../pages/_app";
 import styles from "@/styles/components/Header.module.css";
 import silent_scroll from "@/utilities/silent_scroll";
-
 import icon_image from "../public/android-chrome-192x192.png";
+
+// fonts
 import { Audiowide, Inter } from "next/font/google";
 
+// icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faDiagramProject, faEnvelopeCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
+// data
+import data_links from "@/data/data_links.json";
 
 const font_audiowide = Audiowide({subsets: ["latin"], weight: "400"});
 const font_inter     = Inter({subsets: ["latin"]});
@@ -39,16 +44,16 @@ const PageHeader: NextPageLayout = () => {
 					<FontAwesomeIcon icon={faEnvelopeCircleCheck} width="14" height="14"/>
 					<span>Contacts</span>
 				</Link>
-				<Link className={styles.item} href="https://www.linkedin.com/in/ichenglin">
+				<Link className={styles.item} href={data_links.link_linkedin}>
 					<FontAwesomeIcon icon={faLinkedin} width="14" height="14"/>
 					<span>LinkedIn</span>
 				</Link>
-				<Link className={styles.item} href="https://github.com/ichenglin">
+				<Link className={styles.item} href={data_links.link_github}>
 					<FontAwesomeIcon icon={faGithub} width="14" height="14"/>
 					<span>Github</span>
 				</Link>
 			</nav>
-			<Link className={styles.contact} href="https://github.com/ichenglin">
+			<Link className={styles.contact} href={data_links.link_github}>
 				<FontAwesomeIcon icon={faGithub} width="14" height="14"/>
 				<span>Icheng Lin&apos;s Github</span>
 			</Link>

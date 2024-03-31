@@ -11,6 +11,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
+// data
+import data_links from "@/data/data_links.json";
+
 const Home: NextPageLayout = () => {
 
 	const router = useRouter();
@@ -29,7 +32,7 @@ const Home: NextPageLayout = () => {
 						<FontAwesomeIcon icon={faTerminal} width="14" height="14"/>
 						<span>Projects</span>
 					</Link>
-					<a className={styles.item} href="https://github.com/ichenglin">
+					<a className={styles.item} href={data_links.link_github}>
 						<FontAwesomeIcon icon={faGithub} width="14" height="14"/>
 						<span>Github</span>
 					</a>
