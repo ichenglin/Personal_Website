@@ -52,13 +52,12 @@
 @media screen and (max-width: 1000px) {
     .footer {
         padding: 15px;
-        height: 150px;
         flex-direction: column;
         justify-content: center;
     }
     .copyright {
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 3px;
     }
     .navbar {
         margin-left: unset;
