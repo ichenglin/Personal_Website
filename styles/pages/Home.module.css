@@ -34,10 +34,11 @@
 }
 
 .title {
+	margin-bottom: 70px;
 	display: flex;
 	flex-direction: column;
 	color: #FFFFFF;
-	margin-bottom: 70px;
+	text-wrap: nowrap;
 }
 
 .title > h1 {
@@ -55,7 +56,7 @@
 
 .item {
 	height: 55px;
-	margin-right: 20px;
+	margin-left: 20px;
 	padding: 0px 35px;
 	display: flex;
 	justify-content: center;
@@ -73,6 +74,7 @@
 }
 
 .item:nth-child(1) {
+	margin-left: unset;
 	color: #FFFFFF;
 	background-color: #007ACC;
 }
@@ -104,4 +106,57 @@
 .skills {
 	height: 100vh;
 	background-color: #9CD0F0;
+}
+
+@media screen and (max-width: 1000px) {
+    .cover {
+		margin-left: unset;
+		align-items: center;
+	}
+	.title {
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.title > h1 {
+		font-size: calc(80px * 0.8);
+	}
+	
+	.title > h3 {
+		font-size: calc(50px * 0.8);
+	}
+
+	.item {
+		height: unset;
+		padding: 10px 30px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.title > h1 {
+		font-size: calc(80px * 0.6);
+	}
+	
+	.title > h3 {
+		font-size: calc(50px * 0.6);
+	}
+	
+	.item {
+		padding: calc(10px * 0.6) calc(30px * 0.6);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.title > h1 {
+		font-size: calc(80px * 0.5);
+	}
+	
+	.title > h3 {
+		font-size: calc(50px * 0.5);
+	}
+
+	.item {
+		padding: calc(10px * 0.5) calc(30px * 0.5);
+	}
 }
