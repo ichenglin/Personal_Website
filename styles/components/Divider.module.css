@@ -3,20 +3,21 @@
 }
 
 .section_divider > div {
+    width: 100vw;
+    height: calc(100vw / 16);
     position: absolute;
     bottom: 0px;
     left: 0px;
-    width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
 }
 
 .section_divider > div > svg {
+    width: calc(106% + 1.3px);
+    height: 100%;
     position: relative;
     display: block;
-    width: calc(106% + 1.3px);
-    height: 120px;
     transform: rotateY(180deg);
 
 }

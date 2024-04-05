@@ -25,8 +25,7 @@
 }
 
 .item {
-    margin: 12px;
-    margin-bottom: 10px;
+    margin: 0px 12px -2px 12px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,6 +39,7 @@
 }
 
 .item:hover {
+    margin: -2.5px 12px -4.5px 12px;
     padding-bottom: 5px;
     border-bottom: 2px solid #FFFFFF;
     opacity: 1;
@@ -47,4 +47,20 @@
 
 .item:active {
     filter: brightness(90%);
+}
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        padding: 15px;
+        height: 150px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .copyright {
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .navbar {
+        margin-left: unset;
+    }
 }
