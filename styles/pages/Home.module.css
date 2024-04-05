@@ -105,38 +105,3 @@
 	height: 100vh;
 	background-color: #9CD0F0;
 }
-
-/* cover-project divider */
-
-.section_divider {
-	position: relative;
-}
-
-.section_divider > div {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.section_divider > div > svg {
-    position: relative;
-    display: block;
-    width: calc(106% + 1.3px);
-    height: 120px;
-    transform: rotateY(180deg);
-
-}
-
-.section_divider > div > svg > path {
-    fill: #DAE9F2;
-}
-
-.section_divider_inverted > div {
-	top: 0px;
-	bottom: unset;
-	transform: rotate(0deg);
-}
