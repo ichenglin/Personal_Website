@@ -15,8 +15,10 @@ const ObjectPDFViewer: NextPageLayout<{url: string}> = (props) => {
             <Toolbar>
                 {toolbarPlugin().renderDefaultToolbar((slot: ToolbarSlot) => ({
                     ...slot,
-                    EnterFullScreen: () => (<></>),
-                    Open:            () => (<></>)
+                    EnterFullScreen:         () => (<></>),
+                    EnterFullScreenMenuItem: () => (<></>),
+                    Open:                    () => (<></>),
+                    OpenMenuItem:            () => (<></>)
                 }))}
             </Toolbar>
         )
