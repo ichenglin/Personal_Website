@@ -45,10 +45,10 @@ const PageFooter: NextPageLayout = () => {
 					<FontAwesomeIcon icon={faEnvelopeCircleCheck} width="14" height="14"/>
 					<span>Contacts</span>
 				</Link>
-				<Link className={styles.item} href="/sitemap.xml">
+				<a className={styles.item} href="/sitemap">
 					<FontAwesomeIcon icon={faMapLocationDot} width="14" height="14"/>
 					<span>Sitemap</span>
-				</Link>
+				</a>
 			</div>
 		</footer>
 	);
