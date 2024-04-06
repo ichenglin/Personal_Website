@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }: AppPropsLayout) {
 			<title>{`${page_fallback.page_name} • Icheng Lin`}</title>
 
 			<meta property="og:title"       content={`${page_fallback.page_name} • Icheng Lin`} />
-			<meta property="og:image"       content="https://runtimecloud.com/android-chrome-192x192.png"/>
+			<meta property="og:image"       content="https://ichenglin.net/android-chrome-192x192.png"/>
 			<meta property="og:description" content={page_fallback.page_description} />
 			<meta name="description"        content={page_fallback.page_description} />
 			<meta name="theme-color"        content="#007ACC" />
