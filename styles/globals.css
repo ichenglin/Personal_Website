@@ -11,7 +11,7 @@ html, body {
 }
 
 main {
-	min-height: calc(100vh - 160px);
+	min-height: calc(100svh - 160px);
 }
 
 /* global styles */
