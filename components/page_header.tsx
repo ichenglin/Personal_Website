@@ -11,7 +11,7 @@ import { Audiowide, Inter } from "next/font/google";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faDiagramProject, faEnvelopeCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faDiagramProject, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -40,9 +40,9 @@ const PageHeader: NextPageLayout = () => {
 					<FontAwesomeIcon icon={faDiagramProject} width="14" height="14"/>
 					<span>Projects</span>
 				</Link>
-				<Link className={styles.item} href="/#contacts" onClick={(event: any) => silent_scroll(event, "/", "#contacts", router)}>
-					<FontAwesomeIcon icon={faEnvelopeCircleCheck} width="14" height="14"/>
-					<span>Contacts</span>
+				<Link className={styles.item} href="/resume">
+					<FontAwesomeIcon icon={faFileLines} width="14" height="14"/>
+					<span>Resume</span>
 				</Link>
 				<Link className={styles.item} href={data_links.link_linkedin}>
 					<FontAwesomeIcon icon={faLinkedin} width="14" height="14"/>

@@ -1,13 +1,15 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import type { NextPageLayout } from "../pages/_app";
 import styles from "@/styles/components/Footer.module.css";
+import silent_scroll from "@/utilities/silent_scroll";
 
 // fonts
 import { Inter } from "next/font/google";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faFileLines, faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faEnvelopeCircleCheck, faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -17,6 +19,9 @@ import data_links from "@/data/data_links.json";
 const font_inter = Inter({subsets: ["latin"]});
 
 const PageFooter: NextPageLayout = () => {
+
+	const router = useRouter();
+
 	return (
 		<footer className={`${styles.footer} ${font_inter.className}`}>
 			<div className={styles.copyright}>
@@ -36,9 +41,9 @@ const PageFooter: NextPageLayout = () => {
 					<FontAwesomeIcon icon={faLinkedin} width="14" height="14"/>
 					<span>LinkedIn</span>
 				</Link>
-				<Link className={styles.item} href="/resume">
-					<FontAwesomeIcon icon={faFileLines} width="14" height="14"/>
-					<span>Resume</span>
+				<Link className={styles.item} href="/#contacts" onClick={(event: any) => silent_scroll(event, "/", "#contacts", router)}>
+					<FontAwesomeIcon icon={faEnvelopeCircleCheck} width="14" height="14"/>
+					<span>Contacts</span>
 				</Link>
 				<Link className={styles.item} href="/sitemap.xml">
 					<FontAwesomeIcon icon={faMapLocationDot} width="14" height="14"/>
