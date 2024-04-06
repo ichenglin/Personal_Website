@@ -47,3 +47,35 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .window > svg {
+        width: calc(100px * 0.75);
+        height: calc(100px * 0.75);
+    }
+
+    .window > h5 {
+        font-size: calc(60px * 0.75);
+    }
+    
+    .window > p {
+        max-width: min(calc(600px * 0.75), 90vw);
+        font-size: calc(40px * 0.75);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .window > svg {
+        width: calc(100px * 0.5);
+        height: calc(100px * 0.5);
+    }
+
+    .window > h5 {
+        font-size: calc(60px * 0.5);
+    }
+    
+    .window > p {
+        max-width: min(calc(600px * 0.5), 90vw);
+        font-size: calc(40px * 0.5);
+    }
+}
