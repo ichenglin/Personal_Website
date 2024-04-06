@@ -1,3 +1,4 @@
+import { MouseEvent } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ import { Audiowide, Inter } from "next/font/google";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faDiagramProject, faFileLines } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faDiagramProject, faFileLines, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -24,6 +25,12 @@ const font_inter     = Inter({subsets: ["latin"]});
 const PageHeader: NextPageLayout = () => {
 
 	const router = useRouter();
+
+	const dropdown_toggle = (click_event: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => {
+		const header_element  = document.getElementsByClassName(styles.header)[0];
+		const dropdown_active = (header_element.getAttribute("dropdown-active") === "true");
+		header_element.setAttribute("dropdown-active", (dropdown_active ? "false" : "true"));
+	};
 
 	return (
 		<header className={`${styles.header} ${font_inter.className}`}>
@@ -53,6 +60,11 @@ const PageHeader: NextPageLayout = () => {
 					<span>Github</span>
 				</Link>
 			</nav>
+			<a className={styles.dropdown} target="_blank" onClick={dropdown_toggle}>
+				<FontAwesomeIcon className={styles.inactive} icon={faBars}  width="14" height="14"/>
+				<FontAwesomeIcon className={styles.active} icon={faXmark} width="14" height="14"/>
+				<span>Links</span>
+			</a>
 			<Link className={styles.contact} href={data_links.link_github}>
 				<FontAwesomeIcon icon={faGithub} width="14" height="14"/>
 				<span>Icheng Lin&apos;s Github</span>

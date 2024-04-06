@@ -18,6 +18,7 @@
     align-items: center;
     color: #FFFFFF;
     font-size: 18px;
+    text-wrap: nowrap;
 }
 
 .navbar {
@@ -54,6 +55,28 @@
     filter: brightness(90%);
 }
 
+.dropdown {
+    width: 0px;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.dropdown:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown > span {
+    margin-left: 5px;
+    user-select: none;
+}
+
 .contact {
     height: 30px;
     padding: 0px 15px;
@@ -66,4 +89,64 @@
 
 .contact > svg {
     margin-right: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        width: 150px;
+        height: calc(100svh - 60px);
+        position: absolute;
+        top: 60px;
+        left: -150px;
+        flex-direction: column;
+        align-items: start;
+        background-color: #434749;
+        border-right: 3px solid #007ACC;
+        transition: 0.5s;
+        visibility: hidden;
+    }
+    .header[dropdown-active="true"] > .navbar {
+        left: 0px;
+        z-index: 100;
+        visibility: visible;
+    }
+    .item {
+        padding-top: 10px;
+    }
+    .dropdown {
+        padding: 0px 15px;
+        margin-left: auto;
+        margin-right: 15px;
+        width: unset;
+        height: 30px;
+        visibility: visible;
+    }
+    .dropdown > .active {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+    .header[dropdown-active="true"] > .dropdown > .active {
+        width: unset;
+        height: unset;
+        visibility: visible;
+    }
+    .header[dropdown-active="true"] > .dropdown > .inactive {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .dropdown {
+        margin-right: 0px;
+    }
+    .contact {
+        padding: 0px;
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
 }

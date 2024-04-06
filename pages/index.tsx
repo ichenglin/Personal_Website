@@ -44,9 +44,7 @@ const Home: NextPageLayout = () => {
 			<PageFeatured/>
 			<ObjectDivider type={ObjectDividerType.DIVIDER_DOWNWARD}/>
 			<span className="header_offset" id="contacts"/>
-			<section className={styles.skills}>
-				<p>hi</p>
-			</section>
+			<section className={styles.skills}></section>
 		</>
 	);
 };
