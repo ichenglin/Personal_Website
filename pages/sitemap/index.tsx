@@ -1,5 +1,4 @@
 import type { GetServerSideProps } from "next";
-import { useRouter } from "next/router";
 import { glob } from "glob";
 import type { NextPageLayout } from "../_app";
 
@@ -34,5 +33,4 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 };
 
 const Sitemap: NextPageLayout = () => null;
-
 export default Sitemap;
