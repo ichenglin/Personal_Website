@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import type { NextPageLayout } from "./_app";
 import ObjectReference from "@/components/object_reference";
 import styles from "@/styles/pages/Error.module.css";
@@ -23,5 +24,13 @@ const Error404: NextPageLayout = () => {
 		</section>
 	);
 };
+
+export const getStaticProps: GetStaticProps = async (context) => {
+	return {props: {
+		page_name:        "Not Found",
+		page_description: "Page Not Found",
+		page_pathname:    null
+	}};
+}
 
 export default Error404;

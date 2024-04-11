@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import type { NextPageLayout } from "./_app";
@@ -49,10 +49,11 @@ const Home: NextPageLayout = () => {
 	);
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
 	return {props: {
 		page_name:        "Home",
-		page_description: "Icheng Lin's Portfolio"
+		page_description: "Icheng Lin's Website",
+		page_pathname:    "/"
 	}};
 }
 
