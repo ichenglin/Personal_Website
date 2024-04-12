@@ -25,8 +25,8 @@ const Home: NextPageLayout = () => {
 			<section className={styles.cover}>
 				<video src="images/ic_walking.mp4" autoPlay muted loop playsInline></video>
 				<div className={styles.title}>
-					<h1>I do stuff ._.</h1>
-					<h3>Projects made by <b>Icheng Lin</b></h3>
+					<h1>Icheng Lin</h1>
+					<h3>Computer Science @ UW-Madison</h3>
 				</div>
 				<div className={styles.navbar}>
 					<Link className={styles.item} href="/#projects" onClick={(event: any) => silent_scroll(event, "/", "#projects", router)}>
