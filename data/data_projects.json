@@ -1,7 +1,7 @@
 [
     {
         "name": "Vexrify",
-        "description": "Vexrify discord bot assists Vex Robotics communities with statistics lookup and identity verification services.",
+        "description": "Vexrify is an administrative program made for VEX Robotics communities, providing user-friendly team authentication and Microsoft TrueSkill statistical analytics.",
         "dates": {
             "begin": "Unknown",
             "end": "Unknown"
@@ -15,7 +15,7 @@
     },
     {
         "name": "Skript Studio",
-        "description": "An online code editor made for Skript with built-in syntax highlighting, syntax autocomplete, and obfuscator.",
+        "description": "Skript Studio is an online integrated development environment made for Skript with built-in syntax highlighting, syntax autocomplete, and obfuscator.",
         "dates": {
             "begin": "Unknown",
             "end": "Unknown"
@@ -29,7 +29,7 @@
     },
     {
         "name": "Tankon",
-        "description": "(Project Description Placeholder)",
+        "description": "Tankon is an online multiplayer tank minigame with round-based gameplay, featuring team deathmatch gamemode and scalable game servers.",
         "dates": {
             "begin": "Unknown",
             "end": "Unknown"
@@ -43,35 +43,35 @@
     },
     {
         "name": "FPS Unlock Updater",
-        "description": "An application that automatically updates Roblox FPS Unlocker from axstin/rbxfpsunlocker, whenever a new version is found available.",
+        "description": "FPS Unlock Updater is a software updater program that automatically updates FPS Unlocker from axstin/rbxfpsunlocker, whenever a new version is found available on startup.",
         "dates": {
             "begin": "Unknown",
             "end": "Unknown"
         },
         "image": {
-            "source": "/images/roblox_fps_unlocker_auto_updater.png",
+            "source": "/images/fps_unlock_updater.png",
             "width": 1280,
             "height": 640
         },
-        "reference": "https://github.com/ichenglin/Roblox_FPS_Unlocker_Auto_Updater"
+        "reference": "https://github.com/ichenglin/FPS_Unlock_Updater"
     },
     {
-        "name": "CubedCraft File Uploader",
-        "description": "An open-source application made to simplify the complex process of server developments in CubedCraft. Automatically sync server files with local working directory when changes are applied.",
+        "name": "Skript Synchronizer",
+        "description": "Skript Synchronizer is a Skript code watcher made to simplify the complex process of software development by synchronizing the remote and local working servers when code changes are applied.",
         "dates": {
             "begin": "Unknown",
             "end": "Unknown"
         },
         "image": {
-            "source": "/images/cubedcraft_file_uploader.png",
+            "source": "/images/skript_synchronizer.png",
             "width": 1280,
             "height": 640
         },
-        "reference": "https://github.com/ichenglin/CubedCraft_File_Uploader"
+        "reference": "https://github.com/ichenglin/Skript_Synchronizer"
     },
     {
-        "name": "Sladden",
-        "description": "(Project Description Placeholder)",
+        "name": "Sladden FPS",
+        "description": "Sladden is a first-person shooter minigame with optimized custom raycasting mechanism used for projectile calculations.",
         "dates": {
             "begin": "Unknown",
             "end": "Unknown"
