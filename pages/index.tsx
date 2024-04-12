@@ -7,6 +7,9 @@ import silent_scroll from "@/utilities/silent_scroll";
 import PageFeatured from "@/components/page_featured";
 import ObjectDivider, { ObjectDividerType } from "@/components/object_divider";
 
+// fonts
+import { JetBrains_Mono } from "next/font/google";
+
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTerminal } from "@fortawesome/free-solid-svg-icons";
@@ -15,6 +18,8 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 // data
 import data_links from "@/data/data_links.json";
 
+const font_jetbrains = JetBrains_Mono({subsets: ["latin"]});
+
 const Home: NextPageLayout = () => {
 
 	const router = useRouter();
@@ -22,7 +27,7 @@ const Home: NextPageLayout = () => {
 	return (
 		<>
 			<span className="header_offset" id="cover"/>
-			<section className={styles.cover}>
+			<section className={`${styles.cover} ${font_jetbrains.className}`}>
 				<video src="images/ic_walking.mp4" autoPlay muted loop playsInline></video>
 				<div className={styles.title}>
 					<h1>Icheng Lin</h1>
