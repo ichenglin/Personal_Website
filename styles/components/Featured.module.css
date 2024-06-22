@@ -38,11 +38,23 @@
         padding: 0px calc((100vw - 1150px) / 2);
         grid-template-columns: repeat(2, calc((100% - 50px) / 2));
     }
+    .project_information > h3 {
+        font-size: 22px;
+    }
+    .project_information > p {
+        font-size: 17px;
+    }
 }
 
 @media screen and (max-width: 1150px) {
     .grid {
         padding: 0px calc((100vw - 600px) / 2);
         grid-template-columns: calc((100% - 0px) / 1);
+    }
+    .project_information > h3 {
+        font-size: 20px;
+    }
+    .project_information > p {
+        font-size: 16px;
     }
 }
