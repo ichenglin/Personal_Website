@@ -93,7 +93,7 @@
 	font-weight: 500;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     .cover {
 		margin-left: unset;
 		align-items: center;
@@ -101,17 +101,20 @@
 	.intro {
 		align-items: center;
 	}
+	.intro > h3 {
+		margin: 0px 20px;
+		text-wrap: balance;
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 800px) {
 	.intro > h1 {
 		font-size: calc(80px * 0.8);
 	}
-	
 	.intro > h3 {
 		font-size: calc(40px * 0.8);
 	}
-
 	.item {
 		height: unset;
 		padding: 10px 30px;
@@ -122,11 +125,9 @@
 	.intro > h1 {
 		font-size: calc(80px * 0.6);
 	}
-	
 	.intro > h3 {
 		font-size: calc(40px * 0.6);
 	}
-	
 	.item {
 		padding: calc(10px * 0.6) calc(30px * 0.6);
 	}
@@ -136,11 +137,9 @@
 	.intro > h1 {
 		font-size: calc(80px * 0.5);
 	}
-	
 	.intro > h3 {
 		font-size: calc(40px * 0.5);
 	}
-
 	.item {
 		padding: calc(10px * 0.5) calc(30px * 0.5);
 	}
