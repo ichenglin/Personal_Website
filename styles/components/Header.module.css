@@ -18,7 +18,7 @@
     align-items: center;
     color: #FFFFFF;
     font-size: 18px;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .navbar {

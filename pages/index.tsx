@@ -33,7 +33,7 @@ const Home: NextPageLayout = () => {
 				<video src="images/ic_walking.mp4" autoPlay muted loop playsInline></video>
 				<div className={styles.intro}>
 					<h1>Icheng Lin</h1>
-					<h3>Computer Engineering/Science @ UW-Madison</h3>
+					<h3><span>Computer Engineering/Science</span> <span>@ UW-Madison</span></h3>
 				</div>
 				<div className={styles.navbar}>
 					<Link className={styles.item} href="/#projects" onClick={(event: any) => silent_scroll(event, "/", "#projects", router)}>
