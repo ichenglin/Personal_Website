@@ -78,6 +78,7 @@
 }
 
 .contact {
+    width: 180px;
     height: 30px;
     padding: 0px 15px;
     display: flex;
@@ -93,21 +94,20 @@
 
 @media screen and (max-width: 900px) {
     .navbar {
-        width: 150px;
-        height: calc(100svh - 60px);
+        padding: 10px 10px 20px 10px;
         position: absolute;
-        top: 60px;
-        left: -150px;
+        top: 75px;
+        right: 15px;
         flex-direction: column;
-        align-items: start;
-        background-color: #434749;
-        border-right: 3px solid #007ACC;
-        transition: 0.5s;
+        background-color: #007ACC;
+        border-radius: 5px;
+        opacity: 0;
         visibility: hidden;
     }
     .header[dropdown-active="true"] > .navbar {
-        left: 0px;
         z-index: 100;
+        transition: 0.5s; /* active only to prevent glitch when resize window */
+        opacity: 0.85;
         visibility: visible;
     }
     .item {
@@ -117,7 +117,7 @@
         padding: 0px 15px;
         margin-left: auto;
         margin-right: 15px;
-        width: unset;
+        width: 85px;
         height: 30px;
         visibility: visible;
     }
