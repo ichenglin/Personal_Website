@@ -33,7 +33,7 @@
 	object-fit: cover;
 }
 
-.title {
+.intro {
 	margin-bottom: 100px;
 	display: flex;
 	flex-direction: column;
@@ -41,12 +41,12 @@
 	text-wrap: nowrap;
 }
 
-.title > h1 {
+.intro > h1 {
 	font-size: 80px;
 	font-weight: 800;
 }
 
-.title > h3 {
+.intro > h3 {
 	font-size: 40px;
 }
 
@@ -93,37 +93,22 @@
 	font-weight: 500;
 }
 
-.slide {
-	width: auto;
-	height: 70%;
-	position: absolute;
-	top: 15%;
-	left: 50%;
-	border: 3px solid #007ACC;
-	border-radius: 10px;
-}
-
-.skills {
-	height: 100svh;
-	background-color: #9CD0F0;
-}
-
 @media screen and (max-width: 1000px) {
     .cover {
 		margin-left: unset;
 		align-items: center;
 	}
-	.title {
+	.intro {
 		align-items: center;
 	}
 }
 
 @media screen and (max-width: 800px) {
-	.title > h1 {
+	.intro > h1 {
 		font-size: calc(80px * 0.8);
 	}
 	
-	.title > h3 {
+	.intro > h3 {
 		font-size: calc(40px * 0.8);
 	}
 
@@ -134,11 +119,11 @@
 }
 
 @media screen and (max-width: 600px) {
-	.title > h1 {
+	.intro > h1 {
 		font-size: calc(80px * 0.6);
 	}
 	
-	.title > h3 {
+	.intro > h3 {
 		font-size: calc(40px * 0.6);
 	}
 	
@@ -148,15 +133,49 @@
 }
 
 @media screen and (max-width: 500px) {
-	.title > h1 {
+	.intro > h1 {
 		font-size: calc(80px * 0.5);
 	}
 	
-	.title > h3 {
+	.intro > h3 {
 		font-size: calc(40px * 0.5);
 	}
 
 	.item {
 		padding: calc(10px * 0.5) calc(30px * 0.5);
 	}
+}
+
+/* featured section */
+
+.featured {
+	padding: 50px 50px 50px 50px;
+    background-color: #DAE9F2;
+}
+
+/* about section */
+
+.about {
+	padding: 150px 50px 50px 50px;
+	height: 100svh;
+	background-color: #9CD0F0;
+}
+
+.about > .title > h1 > svg {
+	color: #E06C75;
+}
+
+/* page components */
+
+.title {
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title > h1 {
+    font-size: 36px;
+    font-weight: 700;
 }

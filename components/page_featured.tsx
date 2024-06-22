@@ -8,17 +8,12 @@ import { Dosis } from "next/font/google";
 
 // data
 import data_projects from "@/data/data_projects.json";
-import data_links from "@/data/data_links.json";
 
 const font_dosis = Dosis({subsets: ["latin"]});
 
 const PageFeatured: NextPageLayout = () => {
 	return (
-		<section className={styles.featured}>
-            <div className={`${styles.title} ${font_dosis.className}`}>
-                <h1>Personal Projects</h1>
-                <ObjectReference message="See All Projects" href={data_links.link_github}/>
-            </div>
+		<div className={styles.grid}>
             {data_projects.map((project_data, project_index) => <div className={`${styles.project} container_shadow`} key={project_index}>
                 <div className={styles.project_demo}>
                     <Image src={project_data.image.source} alt={project_data.name} width={project_data.image.width} height={project_data.image.height}/>
@@ -31,7 +26,7 @@ const PageFeatured: NextPageLayout = () => {
                     <ObjectReference message="Learn More" href={project_data.reference}/>
                 </div>
             </div>)}
-		</section>
+		</div>
 	);
 };
 
