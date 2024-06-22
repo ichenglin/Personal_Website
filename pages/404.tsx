@@ -28,7 +28,7 @@ const Error404: NextPageLayout = () => {
 export const getStaticProps: GetStaticProps = async (context) => {
 	return {props: {
 		page_name:        "Not Found",
-		page_description: "Page Not Found",
+		page_description: "The requested page could not be found or is currently under maintenance.",
 		page_pathname:    null
 	}};
 }
