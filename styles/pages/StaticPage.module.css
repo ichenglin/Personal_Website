@@ -1,5 +1,4 @@
 .viewer {
     width: 100%;
-    height: calc(100svh - 160px);
-    overflow: hidden;
+    min-height: calc(100svh - 160px);
 }

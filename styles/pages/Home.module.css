@@ -1,7 +1,7 @@
 /* cover section */
 
 .cover {
-	height: calc(100svh - 60px - 120px);
+	min-height: calc(100svh - 60px - 120px);
 	margin-left: 100px;
 	display: flex;
 	flex-direction: column;
@@ -156,7 +156,7 @@
 
 .about {
 	padding: 150px 50px 50px 50px;
-	height: 100svh;
+	min-height: 100svh;
 	background-color: #9CD0F0;
 }
 
