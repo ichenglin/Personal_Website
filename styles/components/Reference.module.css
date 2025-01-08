@@ -1,6 +1,5 @@
 .reference {
-    width: min-content;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     color: #0069FF;
     font-size: 16px;

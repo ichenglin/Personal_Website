@@ -1,5 +1,5 @@
 .markdown {
-    margin: 15px;
+    margin: 0px 15px;
     display: flex;
     flex-direction: column;
 }
@@ -69,6 +69,57 @@
     unicode-bidi: isolate;
 }
 
+.markdown p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.markdown blockquote {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    unicode-bidi: isolate;
+}
+
+.markdown ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
 .markdown a {
-    color: #007ACC;
+    display: inline-flex;
+    flex-direction: column;
+    color: #0069FF;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.markdown a::after {
+    content: "";
+    margin-top: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: transparent;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.markdown a:hover:after {
+    content: "";
+    margin-top: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #0069FF;
 }
