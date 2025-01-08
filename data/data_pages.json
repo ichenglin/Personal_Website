@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Resume",
+        "description": "Hey, I'm Icheng Lin! Please check out my most recent computer engineering/science resume.",
+        "type": "file",
+        "pathname": "/resume",
+        "source": "/files/Ichenglin Resume.pdf",
+        "sitemap": true
+    },
+    {
+        "name": "Digital Marketing Certificate",
+        "description": "Hey, I'm Icheng Lin! Please check out my Digital Marketing Certificate received from UW-Madison SuccessWorks.",
+        "type": "file",
+        "pathname": "/certifications/successworks-digital-marketing",
+        "source": "/files/SuccessWorks Digital Marketing.pdf",
+        "sitemap": false
+    },
+    {
+        "name": "Markdown Template",
+        "description": "Template for loading markdown files",
+        "type": "markdown",
+        "pathname": "/mdtest",
+        "source": "/markups/template.md",
+        "sitemap": false
+    }
+]

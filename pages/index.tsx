@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import type { NextPageLayout } from "./_app";
 import styles from "@/styles/pages/Home.module.css";
-import silent_scroll from "@/utilities/silent_scroll";
+import silent_scroll from "@/utilities/util_scroll";
 import PageFeatured from "@/components/page_featured";
 import ObjectDivider, { ObjectDividerType } from "@/components/object_divider";
 import ObjectReference from "@/components/object_reference";

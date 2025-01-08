@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import type { NextPageLayout } from "../pages/_app";
 import styles from "@/styles/components/Footer.module.css";
-import silent_scroll from "@/utilities/silent_scroll";
+import silent_scroll from "@/utilities/util_scroll";
 
 // fonts
 import { Inter } from "next/font/google";

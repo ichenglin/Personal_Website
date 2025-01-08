@@ -4,6 +4,7 @@ import type { NextPageLayout } from "../_app";
 
 // data
 import data_sitemaps from "@/data/data_sitemaps.json";
+import data_pages from "@/data/data_pages.json";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const context_response = context.res;
@@ -23,7 +24,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
 function website_sitemaps() {
     const routes_modified = (new Date()).toISOString().slice(0, 10);
-	const routes_url      = [...website_routes(), ...data_sitemaps];
+	const routes_url      = [...website_routes(), ...website_files(), ...data_sitemaps];
     const routes_ranked   = routes_url.map(page_url => {
         const page_link = (page_url.match(/^https?:\/\/(.+)$/) as RegExpMatchArray)[1];
         const page_rank = (page_link.split(/[\/\.]+/).length - 1);
@@ -45,6 +46,10 @@ function website_routes() {
     const routes_pathname  = routes_directory.map(page_directory => (page_directory.match(/^pages(.*)\/index\.tsx$/) as RegExpMatchArray)[1])
     const routes_valid     = routes_pathname.filter(page_pathname => page_pathname !== "/sitemap");
     return routes_valid.map(page_pathname => `https://ichenglin.net${page_pathname}`);
+}
+
+function website_files() {
+    return data_pages.filter(page_data => page_data.sitemap).map(page_data => `https://ichenglin.net${page_data.pathname}`);
 }
 
 const Sitemap: NextPageLayout = () => null;

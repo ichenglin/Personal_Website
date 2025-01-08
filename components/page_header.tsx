@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { NextPageLayout } from "../pages/_app";
 import styles from "@/styles/components/Header.module.css";
-import silent_scroll from "@/utilities/silent_scroll";
+import silent_scroll from "@/utilities/util_scroll";
 import icon_image from "../public/android-chrome-192x192.png";
 
 // fonts
