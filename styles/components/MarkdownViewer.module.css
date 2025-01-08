@@ -1,7 +1,5 @@
 .markdown {
-    margin: 0px 15px;
-    display: flex;
-    flex-direction: column;
+    margin: 0px max(calc(((100svw - 900px) / 2)), 30px);
 }
 
 .markdown h1 {
