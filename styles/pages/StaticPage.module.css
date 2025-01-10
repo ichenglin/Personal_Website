@@ -1,5 +1,4 @@
 .viewer {
-    padding: 30px;
     width: 100%;
     min-height: calc(100svh - 160px);
     display: flex;

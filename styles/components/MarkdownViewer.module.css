@@ -1,9 +1,11 @@
+.markdown {
+    margin: 30px;
+}
+
 .markdown a {
     display: inline-flex;
     flex-direction: column;
     color: #28A3F5;
-    font-size: 16px;
-    font-weight: 600;
     text-decoration: none;
 }
 
