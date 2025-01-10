@@ -25,7 +25,7 @@ const PageFooter: NextPageLayout = () => {
 	return (
 		<footer className={`${styles.footer} ${font_inter.className}`}>
 			<div className={styles.copyright}>
-				<p><b>© 2024 Icheng Lin. All Rights Reserved.</b></p>
+				<p><b>© 2025 Icheng Lin. All Rights Reserved.</b></p>
 				<p>
 					<span>Made with </span>
 					<FontAwesomeIcon icon={faHeart} width="14" height="14"/>
