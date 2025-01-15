@@ -32,7 +32,8 @@ export default function App({ Component, pageProps }: AppPropsLayout) {
 	const page_fallback = {
 		page_name:        prop_default(pageProps.page_name        as string, ""),
 		page_description: prop_default(pageProps.page_description as string, ""),
-		page_pathname:    prop_default(pageProps.page_pathname    as string, undefined, (page_pathname) => `https://ichenglin.net${page_pathname}`)
+		page_pathname:    prop_default(pageProps.page_pathname    as string, undefined, (page_pathname) => `https://ichenglin.net${page_pathname}`),
+		page_robots:      prop_default(pageProps.page_robots      as string, "all")
 	};
 	return <>
 		<Head>
@@ -48,6 +49,7 @@ export default function App({ Component, pageProps }: AppPropsLayout) {
 			<meta property="og:url"         content={page_fallback.page_pathname}/>
 			<meta name="description"        content={page_fallback.page_description}/>
 			<meta name="theme-color"        content="#007ACC"/>
+			<meta name="robots"             content={page_fallback.page_robots}/>
 
 			<link rel="icon"                href="/favicon.ico"   crossOrigin="use-credentials"/>
 			<link rel="apple-touch-icon"    href="/logo192.png"   crossOrigin="use-credentials"/>

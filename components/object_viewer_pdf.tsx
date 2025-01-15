@@ -19,7 +19,9 @@ const ObjectPDFViewer: NextPageLayout<{url: string}> = (props) => {
                     EnterFullScreen:         () => (<></>),
                     EnterFullScreenMenuItem: () => (<></>),
                     Open:                    () => (<></>),
-                    OpenMenuItem:            () => (<></>)
+                    OpenMenuItem:            () => (<></>),
+                    SwitchTheme:             () => (<></>),
+                    SwitchThemeMenuItem:     () => (<></>)
                 }))}
             </Toolbar>
         )

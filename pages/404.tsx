@@ -29,7 +29,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 	return {props: {
 		page_name:        "Not Found",
 		page_description: "The requested page could not be found or is currently under maintenance.",
-		page_pathname:    null
+		page_pathname:    null,
+		page_robots:      "noindex,nofollow"
 	}};
 }
 

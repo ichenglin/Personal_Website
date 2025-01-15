@@ -32,6 +32,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 		page_name:        page_data.name,
 		page_description: page_data.description,
 		page_pathname:    page_data.pathname,
+		page_robots:      ((page_data.sitemap === true) ? null : "noindex,nofollow"),
 		// local props
 		page_data:        page_data,
 		page_markdown:    ((page_data.type === "markdown") && FileSystem.readFileSync(`${process.cwd()}/${page_data.source}`, "utf8"))

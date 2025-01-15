@@ -71,7 +71,7 @@ const Home: NextPageLayout = () => {
 export const getStaticProps: GetStaticProps = async (context) => {
 	return {props: {
 		page_name:        "Home",
-		page_description: "Hey, I'm Icheng Lin! I'm a computer engineering/science student passionate about computer architecture at the University of Wisconsin-Madison.",
+		page_description: "Computer Engineering/Science @ UW-Madison",
 		page_pathname:    "/"
 	}};
 }
