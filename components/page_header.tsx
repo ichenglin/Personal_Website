@@ -12,7 +12,7 @@ import { Audiowide, Inter } from "next/font/google";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faDiagramProject, faFileLines, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faDiagramProject, faFileLines, faBars, faXmark, faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -40,8 +40,8 @@ const PageHeader: NextPageLayout = () => {
 			</Link>
 			<nav className={styles.navbar}>
 				<Link className={styles.item} href="/#cover"    onClick={(event: any) => silent_scroll(event, "/", "#cover", router)}>
-					<FontAwesomeIcon icon={faHouse} width="14" height="14"/>
-					<span>Home</span>
+					<FontAwesomeIcon icon={faLightbulb} width="14" height="14"/>
+					<span>About</span>
 				</Link>
 				<Link className={styles.item} href="/#projects" onClick={(event: any) => silent_scroll(event, "/", "#projects", router)}>
 					<FontAwesomeIcon icon={faDiagramProject} width="14" height="14"/>

@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import type { NextPageLayout } from "./_app";
-import styles from "@/styles/pages/Home.module.css";
+import styles from "@/styles/pages/About.module.css";
 import silent_scroll from "@/utilities/util_scroll";
 import PageFeatured from "@/components/page_featured";
 import ObjectDivider, { ObjectDividerType } from "@/components/object_divider";
@@ -13,7 +13,7 @@ import { Dosis, JetBrains_Mono } from "next/font/google";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTerminal, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 // data
@@ -22,7 +22,7 @@ import data_links from "@/data/data_links.json";
 const font_jetbrains = JetBrains_Mono({subsets: ["latin"]});
 const font_dosis     = Dosis         ({subsets: ["latin"]});
 
-const Home: NextPageLayout = () => {
+const About: NextPageLayout = () => {
 
 	const router = useRouter();
 
@@ -55,25 +55,16 @@ const Home: NextPageLayout = () => {
 				</div>
 				<PageFeatured/>
 			</section>
-			<ObjectDivider type={ObjectDividerType.DIVIDER_DOWNWARD}/>
-			<span className="header_offset" id="about"/>
-			<section className={styles.about}>
-				<div className={`${styles.title} ${font_dosis.className}`}>
-					<h1>About Me <FontAwesomeIcon icon={faHeart}/></h1>
-					<ObjectReference message="Contact Information" href="/contact"/>
-				</div>
-				<p></p>
-			</section>
 		</>
 	);
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
 	return {props: {
-		page_name:        "Home",
-		page_description: "Computer Engineering/Science @ UW-Madison",
+		page_name:        "About",
+		page_description: "Undergraduate in Computer Engineering/Science at the University of Wisconsin-Madison",
 		page_pathname:    "/"
 	}};
 }
 
-export default Home;
+export default About;
