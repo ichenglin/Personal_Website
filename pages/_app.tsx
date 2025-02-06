@@ -13,6 +13,9 @@ import { Inter } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
+// data
+import data_links from "@/data/data_links.json";
+
 const font_inter = Inter({subsets: ["latin"]});
 
 // fontawesome implementation
@@ -32,7 +35,7 @@ export default function App({ Component, pageProps }: AppPropsLayout) {
 	const page_fallback = {
 		page_name:        prop_default(pageProps.page_name        as string, ""),
 		page_description: prop_default(pageProps.page_description as string, ""),
-		page_pathname:    prop_default(pageProps.page_pathname    as string, undefined, (page_pathname) => `https://ichenglin.net${page_pathname}`),
+		page_pathname:    prop_default(pageProps.page_pathname    as string, undefined, (page_pathname) => `${data_links.link_website}${page_pathname}`),
 		page_robots:      prop_default(pageProps.page_robots      as string, "all")
 	};
 	return <>
@@ -44,7 +47,7 @@ export default function App({ Component, pageProps }: AppPropsLayout) {
 
 			<meta property="og:site_name"   content="Icheng Lin"/>
 			<meta property="og:title"       content={`${page_fallback.page_name} • Icheng Lin`}/>
-			<meta property="og:image"       content="https://ichenglin.net/android-chrome-192x192.png"/>
+			<meta property="og:image"       content={`${data_links.link_website}/android-chrome-192x192.png`}/>
 			<meta property="og:description" content={page_fallback.page_description}/>
 			<meta property="og:url"         content={page_fallback.page_pathname}/>
 			<meta name="description"        content={page_fallback.page_description}/>

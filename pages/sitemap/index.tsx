@@ -4,6 +4,7 @@ import type { NextPageLayout } from "../_app";
 
 // data
 import data_sitemaps from "@/data/data_sitemaps.json";
+import data_links from "@/data/data_links.json";
 import data_pages from "@/data/data_pages.json";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
@@ -45,11 +46,11 @@ function website_routes() {
     const routes_directory = glob.sync("pages/**/index.tsx");
     const routes_pathname  = routes_directory.map(page_directory => (page_directory.match(/^pages(.*)\/index\.tsx$/) as RegExpMatchArray)[1])
     const routes_valid     = routes_pathname.filter(page_pathname => page_pathname !== "/sitemap");
-    return routes_valid.map(page_pathname => `https://ichenglin.net${page_pathname}`);
+    return routes_valid.map(page_pathname => `${data_links.link_website}${page_pathname}`);
 }
 
 function website_files() {
-    return data_pages.filter(page_data => page_data.sitemap).map(page_data => `https://ichenglin.net${page_data.pathname}`);
+    return data_pages.filter(page_data => page_data.sitemap).map(page_data => `${data_links.link_website}${page_data.pathname}`);
 }
 
 const Sitemap: NextPageLayout = () => null;
